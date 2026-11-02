@@ -10,4 +10,6 @@ Anduril 創辦人 Palmer Luckey 在 Bloomberg Tech 談他和高通推出的 Blue
 
 這些說法裡，補貼、制裁和估價三處，和公開資料有出入。
 
+整理與查證由 AI 模型完成，未經人工逐句校稿，詳見網頁〈製作說明〉。
+
 完整內容與影片時間點：https://lushinshang.github.io/luckey-qualcomm-american-laptop/
