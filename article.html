@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電</title>
+<meta name="description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：他的說法逐項對照官方與媒體，哪些成立、哪些只是看法。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電">
+<meta property="og:description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：他的說法逐項對照官方與媒體，哪些成立、哪些只是看法。">
+<meta property="og:image" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電">
+<meta name="twitter:description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：他的說法逐項對照官方與媒體，哪些成立、哪些只是看法。">
+<meta name="twitter:image" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/article.html">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1120px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  white-space:nowrap;-webkit-overflow-scrolling:touch;min-height:52px;align-items:center}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:inline-block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;min-height:36px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--note);color:var(--ink)}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+header.hero{padding:56px 0 8px;text-align:center}
+.eyebrow{margin:0 0 8px;color:var(--accent-ink);font-weight:700;letter-spacing:0;font-size:14px}
+h1{margin:0 auto 14px;max-width:820px;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.3;text-wrap:balance}
+.byline{margin:0 0 6px;color:var(--muted);font-size:14px}
+.video-link{margin:0 0 28px;font-size:14px}
+figure{margin:32px 0}
+figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar-d,16/9);object-fit:contain;border-radius:12px;
+  box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+@media (max-width:640px){figure picture img{aspect-ratio:var(--ar-m,9/16)}}
+@media (max-width:640px){figure.hero-figure picture img{max-width:300px;margin:0 auto}}
+figure.hero-figure{max-width:720px;margin-left:auto;margin-right:auto}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+p.figcap{margin:-18px auto 1.4em;text-align:center;font-size:14px;color:var(--muted)}
+figcaption{margin:10px auto 0;max-width:720px;font-size:14px;line-height:1.55;color:var(--muted);text-align:center}
+article{max-width:720px;margin:0 auto}
+article figure.section-figure{margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+h2{margin:56px 0 12px;font-size:1.55rem;line-height:1.4;scroll-margin-top:72px;text-wrap:balance;
+  border-left:5px solid var(--accent);padding-left:14px;margin-left:-19px}
+h3{margin:36px 0 8px;font-size:1.2rem;line-height:1.45}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.2em;padding-left:1.4em}
+li{margin:.35em 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.1em .4em;border-radius:5px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+section.summary-card{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:6px 22px 10px;margin:24px 0 8px;box-shadow:var(--shadow)}
+section.summary-card h2{margin:14px 0 8px;font-size:1.2rem;border-left:0;padding-left:0;margin-left:0}
+section.summary-card p{margin:0 0 .8em;font-size:16.5px}
+ol.takeaways{padding-left:1.6em}
+ol.takeaways li{margin:.8em 0;padding-left:.2em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources li{overflow-wrap:anywhere}
+aside.note{background:var(--note);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 1.6em;font-size:15px;color:var(--ink)}
+aside.note p,aside.note ul{margin:0 0 .6em}
+aside.note ul{padding-left:1.3em}
+figure.diagram{margin:28px 0}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;-webkit-overflow-scrolling:touch}
+.mermaid-scroll pre{margin:0;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 1.6em;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.55}
+.table-scroll th,.table-scroll td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note);font-weight:700}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.table-scroll td.nw{white-space:nowrap}
+.table-scroll.wide{margin-left:50%;transform:translateX(-50%);width:min(1040px,calc(100vw - 32px))}
+@media (max-width:640px){.table-scroll.wide{margin-left:0;transform:none;width:auto}}
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible}
+  .table-scroll table{min-width:0}
+  .table-scroll thead{position:absolute;left:-9999px}
+  .table-scroll tr,.table-scroll td{display:block}
+  .table-scroll tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .table-scroll tr:last-child{border-bottom:0}
+  .table-scroll td{padding:2px 0;border:0}
+  .table-scroll td.k{color:var(--accent-ink);white-space:normal}
+  .table-scroll td.nw{white-space:normal}
+  .table-scroll td::before{content:attr(data-label) "：";font-weight:700;color:var(--muted);font-size:13px}
+}
+
+p.lede{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px;line-height:1.65}
+footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+@media (max-width:760px){
+  h2{margin-left:0;border-left:0;padding-left:0;border-top:3px solid var(--accent);padding-top:10px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 64px}
+  header.hero{padding-top:36px}
+  h2{font-size:1.35rem}
+  section.summary-card{padding:4px 16px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="一台筆電，只有九成">一台筆電，只有九成</a></li><li><a href="#sec-2" title="先看重點">先看重點</a></li><li><a href="#sec-3" title="為什麼要做電腦">為什麼要做電腦</a></li><li><a href="#sec-4" title="補貼只補到晶片嗎">補貼只補到晶片嗎</a></li><li><a href="#sec-5" title="能做到百分之百嗎">能做到百分之百嗎</a></li><li><a href="#sec-6" title="被制裁的公司，還是被制裁的人">被制裁的公司，還是被制裁的人</a></li><li><a href="#sec-7" title="為什麼電腦需要軟體">為什麼電腦需要軟體</a></li><li><a href="#sec-8" title="工廠與時程">工廠與時程</a></li><li><a href="#sec-9" title="Meridian：他能說的與查得到的">Meridian：他能說的與查得到的</a></li><li><a href="#sec-10" title="烏克蘭、預算與日本">烏克蘭、預算與日本</a></li><li><a href="#sec-11" title="這場訪談的限制">這場訪談的限制</a></li><li><a href="#sec-12" title="結論與啟示">結論與啟示</a></li><li><a href="#sec-13" title="製作說明：這篇導讀由 AI 模型完成">製作說明：這篇導讀由 AI 模型完成</a></li><li><a href="#sec-14" title="來源清單">來源清單</a></li></ul></nav>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">深度導讀</p>
+<h1>九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電</h1>
+<p class="lede">Bloomberg Tech 專訪 Anduril 創辦人 Palmer Luckey（2026-10-27）深度導讀：他的說法對上官方文件與媒體報導，哪些成立、哪些還只是計畫</p>
+<p class="byline">整理：2026-11-02　資料截至 2026-11-02</p>
+</header>
+<main id="main"><article>
+<aside class="note"><p>本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿；依 YouTube 機器字幕製作，未對照原音。訪談全文的繁中譯文見<a href="translation-zh.html">譯文頁</a>，想邊看影片邊對照中英字幕，可以用<a href="player.html">播放器頁</a>；另有<a href="index.html">逐頁簡報版</a>。模型分工見文末〈製作說明〉，重要說法都附來源連結，請以來源為準。</p></aside>
+<h2 id="sec-1">一台筆電，只有九成</h2>
+<p>10 月 27 日，Anduril 與高通（Qualcomm）宣布推出 BlueChip，首款產品是在美國設計與組裝的強固型筆電（<a href="https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/" target="_blank" rel="noopener noreferrer">TechCrunch</a>）。同一天，Bloomberg Tech 請 Anduril 創辦人 Palmer Luckey 上節目，由主持人 Ed Ludlow 訪問，影片長 14 分 43 秒。</p>
+<p>主持人的開場把這個計畫說成「100% 美國製造電腦」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=252s" target="_blank" rel="noopener noreferrer">04:12</a>）。Luckey 自己的說法比標題保守：目前原型機的顯示面板在「另一個國家」製造，整機大約 <strong>90% 來自美國及其盟友</strong>，100% 美國本土製造則是「明確的技術藍圖」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=436s" target="_blank" rel="noopener noreferrer">07:16</a>）。他也說，現在還不能講是哪家公司，因為還在協商（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=442s" target="_blank" rel="noopener noreferrer">07:22</a>）。</p>
+<p>這篇導讀把整場訪談拆成幾個可以逐項檢查的說法，對上官方文件與主流媒體。標示方式如下：「已確認」＝有官方或一手文件，且與說法吻合；「當事方自揭」＝只有 Luckey 或 Anduril 自己的說法；「單方說法」＝只有單一來源；「有爭議」＝來源之間互相衝突；「本文歸納」＝本文自己的整理與判斷，不是來源的主張。「部分確認」「部分成立」＝只有一部分有來源支持；「未找到」＝找不到出處；「有落差」＝與來源的內容不同。</p>
+<p>影片沒有業配段落。這是 Bloomberg 的直播訪談，播出時距期中選舉（2026-11-03 投票）只剩一週，Luckey 談到的 2027 年產品時程、價格與面板供應商，在訪談當天都還沒有定案。</p>
+<h2 id="sec-2">先看重點</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">主題</th><th scope="col">Luckey 的說法</th><th scope="col">對照結果</th></tr></thead><tbody><tr><td class="k" data-label="主題">為什麼做電腦</td><td data-label="Luckey 的說法">關鍵產業用中國製電腦，等於依賴最大的戰略對手</td><td data-label="對照結果">動機自述，無第三方佐證（當事方自揭）</td></tr><tr><td class="k" data-label="主題">半導體補貼</td><td data-label="Luckey 的說法">補貼只補到晶片，沒人能封裝並做成產品</td><td data-label="對照結果">CHIPS 補貼確實涵蓋先進封裝（Amkor 最高 4.07 億美元，官方）；「做成終端產品」這一段沒找到補貼項目（部分成立）</td></tr><tr><td data-label="主題">高通在亞利桑那製造晶片</td><td data-label="Luckey 的說法">高通「已宣布」在亞利桑那州製造晶片</td><td data-label="對照結果">媒體寫的是晶片由 TSMC 亞利桑那廠製造；高通自己的製造公告沒找到（部分確認）</td></tr><tr><td class="k" data-label="主題">美製比例</td><td data-label="Luckey 的說法">約 90% 來自美國及其盟友，面板在另一個國家，玻璃是美國公司</td><td data-label="對照結果">與 TechCrunch 引述一致，報導指面板在中國製造（當事方自揭）</td></tr><tr><td class="k" data-label="主題">分析師估價</td><td data-label="Luckey 的說法">分析師說美國 iPhone 要 37,000 美元、美國電腦要 100,000 美元</td><td data-label="對照結果">這兩個數字找不到出處；常見估算是約 3,500 美元（未找到）</td></tr><tr><td class="k" data-label="主題">制裁</td><td data-label="Luckey 的說法">他個人與 Anduril 都被中國制裁</td><td data-label="對照結果">Luckey 在 2025-12-26 的名單上（已確認）；Anduril 公司不在同一份 20 家企業名單上（有爭議）</td></tr><tr><td data-label="主題">Arsenal 1</td><td data-label="Luckey 的說法">BlueChip 會在 Arsenal 1 等多處製造（電路板組裝在 Arsenal 1 是主持人開場的說法）</td><td data-label="對照結果">工廠與規模有官方資料（已確認）；BlueChip 在此生產沒有官方資料（當事方自揭）</td></tr><tr><td class="k" data-label="主題">Meridian</td><td data-label="Luckey 的說法">他與 Musk、Gingrich 共同主持；120 天；MITRE 運作；約 20 人</td><td data-label="對照結果">共同主持與 120 天已確認；MITRE 有爭議；20 人與 Axon 創辦人參與沒找到</td></tr><tr><td class="k" data-label="主題">日本與核武</td><td data-label="Luckey 的說法">日本在談修憲以容納核武</td><td data-label="對照結果">報導是首相未明確排除檢討非核三原則中「不允許帶進」一項，那是政策原則，與他的說法有落差</td></tr><tr><td class="k" data-label="主題">時程與價格</td><td data-label="Luckey 的說法">明年量產，不給日期與價格</td><td data-label="對照結果">屬計畫，無從查證（當事方自揭）</td></tr></tbody></table></div>
+<h2 id="sec-3">為什麼要做電腦</h2>
+<p>Luckey 的動機有兩層。第一層是國安：他舉軍方、醫院、發電廠為例，說很多人打造的東西跑在中國製造的電腦上，他認為讓整個國家最關鍵的經濟命脈完全依賴最大的戰略對手，「簡直是瘋了」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=55s" target="_blank" rel="noopener noreferrer">00:55</a>）。第二層是 Anduril 自己的事：他說公司原本沒打算做電腦，是先找過別人投資，沒成功，因為他「不能去做銷售受中國設備控制的自主武器這種生意」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=69s" target="_blank" rel="noopener noreferrer">01:09</a>），最後決定自己出錢。（當事方自揭）</p>
+<p><strong>本文歸納</strong>：兩層合起來看，推論很直接：Anduril 賣自主武器，武器裡的運算硬體不能受制於中國，又沒有人做合格的美國製電腦，只好自己來。說穿了，這是武器公司為了自己的供應鏈往上游做，<strong>BlueChip 先是 Anduril 自己用得上的東西，才談得上是商品</strong>。</p>
+<p>他要賣給誰？主持人問這是不是只給軍方、公共部門與第一線救援的強固型電腦，Luckey 說野心更大：先從軍用開始，因為散熱、防震、耐候防水防塵與安全性的要求最嚴苛，「如果我能造出一台符合軍方需求的電腦，要滿足其他所有人的需求就綽綽有餘」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=120s" target="_blank" rel="noopener noreferrer">02:00</a>）。目前專注政府，接著是處理機密資料的國防公司與電網等關鍵產業，他們需要掌握每一件硬體，並且「不能讓外國對手在他們的機器中植入後門」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=154s" target="_blank" rel="noopener noreferrer">02:34</a>）。</p>
+<p>TechCrunch 對首款產品的描述是軍方、政府、第一線救援與執法客群，預購在 2027 年開放；價格未公布，Luckey 另一場說法是比一般高階 PC 貴約 20%（單方說法，TechCrunch）。<strong>本文歸納</strong>：「更大的野心」目前還停在口頭，產品和客群都還是政府與關鍵產業。</p>
+<h2 id="sec-4">補貼只補到晶片嗎</h2>
+<p>整場訪談裡，論證下最多力氣的是這一段。Luckey 先說「高通已經宣布他們將在亞利桑那州製造晶片」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=200s" target="_blank" rel="noopener noreferrer">03:20</a>），接著說問題是光有晶片不夠：美國對半導體的補貼與投資，到頭來「我們根本沒有任何能力去封裝它們，並將它們轉化為有用的產品」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=207s" target="_blank" rel="noopener noreferrer">03:27</a>）。然後是這句：「從某種角度來看」，美國的半導體補貼實際上只是在補貼中國製造的筆記型電腦，因為晶片都是送到那裡才被做成產品的（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=217s" target="_blank" rel="noopener noreferrer">03:37</a>）。</p>
+<p>拆開來一項一項對：</p>
+<ul><li>高通「已宣布」在亞利桑那製造：TechCrunch 寫的是 BlueChip 的 Snapdragon X Series 晶片由 TSMC 位於亞利桑那的新廠製造；高通自己宣布在亞利桑那製造的公告沒有找到。比較準確的說法是<strong>晶片在亞利桑那由台積電代工</strong>，高通是客戶（部分確認）。</li><li>「沒有能力封裝」：晶片封裝本身有補貼。美國商務部旗下 NIST 在 2024-12-20 公布，Amkor Technology 亞利桑那公司獲最高 4.07 億美元直接資金，用於約 20 億美元、位於亞利桑那州 Peoria 的先進封裝與測試廠，預計創造約 2,000 個製造業職位（<a href="https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor" target="_blank" rel="noopener noreferrer">NIST</a>）。官方新聞稿引述當時商務部長 Raimondo 說，先進封裝是半導體供應鏈的關鍵環節。Amkor 獲得這筆補助是已確認的事實。<strong>本文歸納</strong>：如果 Luckey 說的「封裝」指晶片封裝，補貼在政策上並非沒有涵蓋；但他說的是「現在沒有能力」，這要看該廠是否已投產，目前未知。</li><li>「轉化為有用的產品」：如果他的意思是把晶片做成筆電、手機等終端產品，這一段沒有找到對應的 CHIPS 補貼項目。</li></ul>
+<p><strong>本文歸納</strong>：Luckey 這句話把兩件事攪在一起。晶片封裝有補貼，也有在美國蓋廠；<strong>終端產品的組裝是另一個環節，他的論點放在這裡比較站得住腳</strong>。他自己加了「從某種角度來看」這個限定語，讀的時候要連著它一起讀：這句屬於他的論述，算不上量化分析的結論。</p>
+<h2 id="sec-5">能做到百分之百嗎</h2>
+<p>主持人的問題很直接：在零組件層面與原物料層面，把對中國的依賴降到 0，有可能嗎？（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=263s" target="_blank" rel="noopener noreferrer">04:23</a>）Luckey 先回應分析師的估價，再談現況與路線；現況那一塊是他回答稍後另一個問題時說的。</p>
+<p>一、現況。主持人在 06:35 轉述分析師的問題：你要說服誰在美國製造顯示器？他以面板當例子回答（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=420s" target="_blank" rel="noopener noreferrer">07:00</a>）：原型機的顯示面板在另一個國家製造，上面的玻璃是美國公司做的，顯示模組大部分的組裝在美國完成。整體「大約 90% 來自美國及其盟友」。TechCrunch 引述他同一說法，並寫明面板在中國製造、蓋板玻璃有美國供應商。</p>
+<aside class="note"><p>重點：90% 是「美國及其盟友」，不是美國；Luckey 自己也把 100% 美國製造當作目標（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=81s" target="_blank" rel="noopener noreferrer">01:21</a>），90% 是現況（當事方自揭）。</p></aside>
+<p>主持人開場與 TechCrunch 標題談的「美國製造」，和他這句的口徑不是同一個。另外，影片沒有說 90% 是按成本、零件數還是其他口徑計算，所以這個數字沒辦法換算成「還有多少要補」。</p>
+<p>二、路線。（同一題的回答）他說有「明確達到 100% 美國本土製造的技術藍圖」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=436s" target="_blank" rel="noopener noreferrer">07:16</a>）。官方答案是 2027 年公布更多，他希望在 CES 能有進展可以宣布，目前和多家廠商洽談，已有計畫（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=405s" target="_blank" rel="noopener noreferrer">06:45</a>）。時程只有「2027 年」，沒有日期、沒有廠商、沒有面板規格。</p>
+<p>三、對質疑者的反駁。（回答 04:23 的問題）他批評分析師說美國 iPhone 要 37,000 美元、美國電腦要 100,000 美元，說這些人在替想繼續外包的大企業維持現狀（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=280s" target="_blank" rel="noopener noreferrer">04:40</a>）。這兩個數字本文找不到出處。常見的分析師估算是 Wedbush 的 Dan Ives 所說，美國製 iPhone 可能超過 3,500 美元，約為現價三倍（<a href="https://www.ctvnews.ca/world/trumps-tariffs/article/iphone-could-triple-in-price-to-us3500-if-theyre-made-in-the-us/" target="_blank" rel="noopener noreferrer">CNN 經 CTV News 轉載，2025-04-09</a>）。若字幕沒有聽錯，37,000 與 3,500 差了一個數量級，可能是字幕或口誤，也可能他指的是另一份分析，本文無法判斷（未找到）。</p>
+<p>他支撐「做得到」的核心理由，是自己每天都在美國製造東西：Anduril 的無人機基本上就是電腦，有記憶體、GPU、CPU、感測器、電池與強固設計，<strong>攻擊型無人機和筆電唯一的差別只在鍵盤和螢幕</strong>（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=328s" target="_blank" rel="noopener noreferrer">05:28</a>）。</p>
+<p><strong>本文歸納</strong>：這個類比證明 Anduril 有把電子零件整合成強固系統的能力，但它沒回答消費級筆電的兩個難題：量大時的成本，以及面板這類單一零件的供應。這兩塊剛好也是他沒給細節的地方。<strong>無人機經驗是 Anduril 的本錢，但還不能直接當成 BlueChip 做得到的證據。</strong></p>
+<h2 id="sec-6">被制裁的公司，還是被制裁的人</h2>
+<p>Luckey 把「被中國制裁」當成 Anduril 做這件事的資格：他個人被制裁，「照他們的說法，我是分裂主義者、是恐怖分子」，Anduril 公司同樣受到制裁，所以公司過去 10 年必須發展出獨立於中國的生存模式，多數美國公司說做不到，其實只是不想做（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=356s" target="_blank" rel="noopener noreferrer">05:56</a>）。</p>
+<p>2025-12-26，中國宣布對 20 家美國國防企業與 10 名高階主管實施反制措施，理由是美國宣布對台軍售（<a href="https://fortune.com/2025/12/26/anduril-founder-palmer-luckey-us-defense-companies-china-sanctions-taiwan-arms-sales" target="_blank" rel="noopener noreferrer">Fortune／AP</a>）。依該公告的轉載（<a href="https://news.ifeng.com/c/8pOyUHMrSC9" target="_blank" rel="noopener noreferrer">鳳凰網</a>），10 名高管的第一位是 Palmer Luckey，措施包括凍結其在中國境內財產、禁止與境內組織與個人交易、不予簽發簽證、不准入境（含香港與澳門）。（Luckey 個人：已確認）</p>
+<p>但 20 家企業名單裡，轉載內容沒有列出 Anduril 公司；另有說法稱 2024 年底曾有一次針對 Anduril 的制裁報導，未能核實。<strong>Luckey 說「Anduril 同樣也受到制裁」，目前沒有一手公告佐證</strong>，Fortune 報導的標題也是創辦人被點名。（有爭議）「分裂主義者」「恐怖分子」也不是公告裡的用語，應視為他自己的轉述。</p>
+<p>光是個人被制裁，就足以說明他的處境，這個落差不影響他的論點；只是講到「公司被制裁」，目前有明確文件的只有 Luckey 個人。</p>
+<h2 id="sec-7">為什麼電腦需要軟體</h2>
+<p>主持人轉到 Bloomberg Intelligence 的觀察：Anduril 的軟體平台 Lattice 與俄亥俄的製造擴張要怎麼平衡？（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=449s" target="_blank" rel="noopener noreferrer">07:29</a>）Luckey 說 Anduril 本質上是 AI 公司，Anduril 做軟體的人比所有硬體產品團隊加起來還多（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=487s" target="_blank" rel="noopener noreferrer">08:07</a>），Lattice 是驅動戰鬥機、潛艦與飛彈的 AI 大腦（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=493s" target="_blank" rel="noopener noreferrer">08:13</a>）。（當事方自揭）他還說公司名稱 Anduril Industries 的縮寫是 AI，這是「有原因的」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=480s" target="_blank" rel="noopener noreferrer">08:00</a>）。Anduril Industries 的縮寫字面上確實是 A.I.，是否刻意取名無從查證，應視為玩笑。</p>
+<p>比較有內容的是 BlueChip 為什麼要靠軟體。他說這台筆電不能只跑 Microsoft Office 和 Gmail，必須相容許多 2000 年代、90 年代甚至 80 年代設計的政府舊應用程式，需要驅動程式介接已經存在數十年的舊系統，「這需要大量的軟體工作」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=501s" target="_blank" rel="noopener noreferrer">08:21</a>）。</p>
+<p><strong>本文歸納</strong>：整場訪談裡，講產品差異講得最具體的就是這段。強固型加上舊系統相容，BlueChip 的賣點除了美國製造，還有一項：<strong>政府與關鍵產業能拿它直接接上舊設備</strong>。這個定位本來就跟消費級筆電不在同一條路上；Luckey 自己給的理由是軍規要求最嚴苛，本文則認為舊系統相容也是它先走政府市場的原因之一。</p>
+<h2 id="sec-8">工廠與時程</h2>
+<p>製造地點方面，Luckey 說 BlueChip 會在 Arsenal 1 以及其他多個地點，與「大約兩打其他美國公司」一起製造；目前已在早期原型生產，明年進入量產（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=869s" target="_blank" rel="noopener noreferrer">14:29</a>）。<strong>他沒給確切定價與交貨日期</strong>，理由是 AI 熱潮讓現在「也許」是歷史上最難預測晶片價格與交期的時期，他無法給出有把握在明年交貨時達成的日期或價格（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=843s" target="_blank" rel="noopener noreferrer">14:03</a>）。</p>
+<p>Arsenal 1 是 Anduril 在俄亥俄州 Pickaway County（哥倫布市區域）的工廠。依 JobsOhio 2026-07-27 的新聞稿，這個園區完整建成後規劃 500 萬平方英尺，Anduril 承諾資本投資 9.105 億美元，2035 年前創造 4,008 個職位；首架俄亥俄製 Fury 無人機在這一天下線（<a href="https://www.jobsohio.com/newsroom/news-press/first-ohio-built-fury-rolls-off-andurils-arsenal-1-production-line" target="_blank" rel="noopener noreferrer">JobsOhio</a>）。（已確認）</p>
+<aside class="note"><p>重點：工廠的官方資料講的是 Fury 無人機的生產；BlueChip 的電路板組裝在 Arsenal 1 進行，是主持人開場與 Luckey 的說法（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=11s" target="_blank" rel="noopener noreferrer">00:11</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=873s" target="_blank" rel="noopener noreferrer">14:33</a>），不在這份新聞稿裡。</p></aside>
+<p>供應商有兩打、量產沒有日期，能拿來檢驗的東西都要等到 2027 年，留到結論再一起整理。</p>
+<h2 id="sec-9">Meridian：他能說的與查得到的</h2>
+<p>主持人第一次問 Luckey 關於 Meridian 計畫（Project Meridian）的事。國防部長 Hegseth 在 2026-09-30 的演說中宣布這項計畫，由 Elon Musk、Palmer Luckey 與 Newt Gingrich 三人共同主持，為期 120 天（<a href="https://asiatimes.com/2026/10/hegseth-taps-three-to-lead-future-of-warfare-project/" target="_blank" rel="noopener noreferrer">Asia Times</a>）。（已確認）</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">Luckey 說的</th><th scope="col">查證結果</th></tr></thead><tbody><tr><td data-label="Luckey 說的">三位被任命為指導委員會共同主席（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=559s" target="_blank" rel="noopener noreferrer">09:19</a>）</td><td data-label="查證結果">媒體寫的是共同主持（co-led）；「指導委員會」是他的用語</td></tr><tr><td data-label="Luckey 說的">120 天專案（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=566s" target="_blank" rel="noopener noreferrer">09:26</a>）</td><td data-label="查證結果">與報導一致（已確認）</td></tr><tr><td data-label="Luckey 說的">整個計畫由 MITRE 運作（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=570s" target="_blank" rel="noopener noreferrer">09:30</a>）</td><td data-label="查證結果">Defense Daily 寫國防部選了 MITRE 來領導委員會（<a href="https://www.defensedaily.com/tech-execs-former-defense-officials-picked-for-pentagons-project-meridian-future-warfare-panel/pentagon/" target="_blank" rel="noopener noreferrer">Defense Daily</a>）；也有說法稱備忘錄只寫「合作單位」而未具名，未能核實（有爭議）</td></tr><tr><td data-label="Luckey 說的">約 20 人參與（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=556s" target="_blank" rel="noopener noreferrer">09:16</a>）、Axon 創辦人 Rick Smith 是成員（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=582s" target="_blank" rel="noopener noreferrer">09:42</a>）</td><td data-label="查證結果">沒有找到對應說法（當事方自揭）</td></tr><tr><td data-label="Luckey 說的">重點是 2040、2050 年的戰爭樣貌（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=665s" target="_blank" rel="noopener noreferrer">11:05</a>）</td><td data-label="查證結果">官方只說要研究未來戰爭的樣貌；2040、2050 是他的說法</td></tr><tr><td data-label="Luckey 說的">報告 1 月提交（主持人問，<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=636s" target="_blank" rel="noopener noreferrer">10:36</a>）</td><td data-label="查證結果">據 <a href="https://www.stripes.com/theaters/us/2026-10-01/elon-musk-project-meridian-23025679.html" target="_blank" rel="noopener noreferrer">Stars and Stripes</a> 報導，截止日為 2027-01-28，日期未經官方原文核對</td></tr></tbody></table></div>
+<p>Luckey 在這裡表態了兩次。一次是說他不想要一份智庫報告，不想「重複講著每個人過去 10 年來都知道的那五件事」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=614s" target="_blank" rel="noopener noreferrer">10:14</a>），他希望報告能聚焦原本可能不會受到關注的事。另一次是被問到是否發現五角大廈有可以做得不同的地方，他說「我認為他們可以，但我認為這其實不是這件事的核心重點」，重點是未來的戰爭形態（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=655s" target="_blank" rel="noopener noreferrer">10:55</a>）。<strong>本文歸納</strong>：<strong>他把 Meridian 定位成前瞻研究，不是五角大廈流程的檢討</strong>；報告內容要等 2027 年 1 月之後才能驗證。</p>
+<h2 id="sec-10">烏克蘭、預算與日本</h2>
+<p>談到五角大廈的改革，Luckey 的答案是烏克蘭帶來的教訓：快速採購有用的東西，更關鍵的是<strong>在東西不再有用時停止採購</strong>，這「也許是我們從烏克蘭看到的最重要的事情」：賦予部隊決定權，讓他們可以購買或停止購買（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=694s" target="_blank" rel="noopener noreferrer">11:34</a>）。他接著說大家都知道要這麼做，只是「知道自己胖」跟「真正減重」之間有差別，國防部知道問題在哪，但解決起來很痛苦（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=710s" target="_blank" rel="noopener noreferrer">11:50</a>）。這段是他的評論，別當成採購制度研究的結論來讀。</p>
+<p>距離期中選舉只剩 7 天，主持人問藍色浪潮對國防預算的影響。Luckey 認為即使民主黨大勝，國防支出也不一定會有巨大改變，並強調自己「不是政治人物，是工程師」，這是在專業領域之外的推測（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=763s" target="_blank" rel="noopener noreferrer">12:43</a>）。他說掌握預算的民主黨人也理解需要投資來取代部分老舊系統（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=781s" target="_blank" rel="noopener noreferrer">13:01</a>）。</p>
+<p>接著他說，意識到這件事的不只美國，「日本現在也在談，要以毫無禁忌的態度討論修憲，好讓日本能夠在境內接納核武」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=797s" target="_blank" rel="noopener noreferrer">13:17</a>）。報導的內容不太一樣：2026-08-07，Jiji 報導日本首相高市未明確排除檢討非核三原則，外界解讀為指其中「不允許帶進」一項（<a href="https://english.adnkronos.com/2026/08/07/takaichi-refrains-from-denying-revision-of-nonnuclear-principles/" target="_blank" rel="noopener noreferrer">Jiji／Adnkronos</a>）。</p>
+<aside class="note"><p>重點：非核三原則是政策原則，不是憲法條文；他說的「修憲」在報導裡沒有對應內容。（有落差）</p></aside>
+<h2 id="sec-11">這場訪談的限制</h2>
+<ul><li>單一視角：受訪者是公司創辦人，BlueChip 是他自己的商業計畫；影片裡沒有其他來源的聲音，也沒有高通的人。</li><li>公開資料少：BlueChip 的規格與價格尚未公布，第三方報導主要是 TechCrunch，能和 Luckey 說法互相對照的資料有限。</li><li>說話者歸屬：YouTube 自動字幕沒有說話者標記，本文依上下文區分主持人與 Luckey，遇到不明確的片段不歸給任何一方。</li><li>字幕與翻譯：<strong>字幕由機器產生，數字與人名可能聽錯</strong>（例如 37,000 美元）；中文翻譯同樣是機器完成。</li><li>措辭：Luckey 在訪談中帶有明顯政治立場的用語，例如說工廠關閉是「菁英把我們出賣」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=239s" target="_blank" rel="noopener noreferrer">03:59</a>）。本文只轉述，不把這類措辭當事實陳述。</li><li>提問未追問處：面板廠商他說還不能講（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=442s" target="_blank" rel="noopener noreferrer">07:22</a>），影片沒有再追問；價格與日期同樣沒有細節。</li></ul>
+<h2 id="sec-12">結論與啟示</h2>
+<p><strong>已經有文件支撐的</strong>：BlueChip 存在，首款是強固型筆電；Luckey 個人在中國 2025-12-26 的制裁名單上；他與 Musk、Gingrich 共同主持 Meridian，期程 120 天；Arsenal 1 是真實存在、規模可查的工廠；CHIPS 補貼涵蓋先進封裝（Amkor 的獎勵）。</p>
+<p><strong>只有他自己說的</strong>：約 90% 來自美國及盟友（TechCrunch 引述同一說法）、100% 的技術藍圖、動機與比喻、20 人與 Axon 創辦人參與。</p>
+<p><strong>有爭議的</strong>：Anduril 公司被制裁（2025-12-26 的 20 家名單沒有列出）、Meridian 由 MITRE 運作（Defense Daily 有報導，另有不同說法）。</p>
+<p><strong>與他說法有落差的</strong>：補貼沒有補到封裝（封裝有補貼，終端產品組裝沒找到對應補貼）、高通「已宣布」在亞利桑那製造（沒找到高通公告，報導寫的是台積電代工）、日本修憲容納核武（報導是檢討非核三原則的一項）、分析師的 37,000 與 100,000 美元（找不到）。</p>
+<p><strong>本文歸納</strong>：這場訪談屬於計畫宣布。之後可驗證的東西會陸續出現：2027 年公布的面板來源、價格與交貨日期、首批出貨的美製比例、Meridian 在 2027 年 1 月底前的報告，以及高通是否另有官方說明。在那之前，BlueChip 的價值判斷要停在「合理的論點，尚未被證明」。</p>
+<h2 id="sec-13">製作說明：這篇導讀由 AI 模型完成</h2>
+<ul><li>分析、撰稿、翻譯與查證皆由 AI 模型完成：主控為 Claude Sonnet 5.5；批次翻譯為 Gemini（經 agy 執行），修詞為 Claude；背景查證由 Claude 子代理加主控直接讀頁；獨立審稿為未參與撰稿的 Claude Opus 子代理；最後再由一位 Opus 依總編輯準則潤稿並標示重點。沒有人類校稿。</li><li>依據是 YouTube 自動字幕，並以機器翻譯成繁體中文，<strong>未對照原音</strong>，字幕可能聽錯人名與數字；說話者歸屬依上下文判斷。</li><li>查證原則：重要說法須有一手來源或主流媒體，只有單方者降級標示。</li><li>本導讀沒有生成圖片。</li><li>另有<a href="translation-zh.html">全文譯本</a>、<a href="player.html">雙語字幕播放器</a>與<a href="index.html">逐頁簡報版</a>。</li></ul>
+<h2 id="sec-14">來源清單</h2>
+<ul class="sources"><li><a href="https://www.youtube.com/watch?v=a2wv9giz3vU" target="_blank" rel="noopener noreferrer">Bloomberg Tech：Anduril&#x27;s Luckey Partners With Qualcomm to Build American-Made Laptop（影片）</a>，2026-10-27</li><li><a href="https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/" target="_blank" rel="noopener noreferrer">TechCrunch：Anduril, Qualcomm launch BlueChip, a new kind of US-made laptop</a>，2026-10-27</li><li><a href="https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor" target="_blank" rel="noopener noreferrer">NIST：Biden-Harris Administration Announces CHIPS Incentives Award with Amkor</a>，2024-12-20</li><li><a href="https://www.ctvnews.ca/world/trumps-tariffs/article/iphone-could-triple-in-price-to-us3500-if-theyre-made-in-the-us/" target="_blank" rel="noopener noreferrer">CTV News（轉載 CNN Business）：iPhone could triple in price to $3,500 if they&#x27;re made in the US</a>，2025-04-09</li><li><a href="https://fortune.com/2025/12/26/anduril-founder-palmer-luckey-us-defense-companies-china-sanctions-taiwan-arms-sales" target="_blank" rel="noopener noreferrer">Fortune／AP：Anduril founder Palmer Luckey among sanctioned by China</a>，2025-12-26</li><li><a href="https://news.ifeng.com/c/8pOyUHMrSC9" target="_blank" rel="noopener noreferrer">鳳凰網（轉載中國外交部公告）：對美國防企業與高管採取反制措施</a>，2025-12-26</li><li><a href="https://www.jobsohio.com/newsroom/news-press/first-ohio-built-fury-rolls-off-andurils-arsenal-1-production-line" target="_blank" rel="noopener noreferrer">JobsOhio：First Ohio-Built Fury Rolls Off Arsenal-1</a>，2026-07-27</li><li><a href="https://asiatimes.com/2026/10/hegseth-taps-three-to-lead-future-of-warfare-project/" target="_blank" rel="noopener noreferrer">Asia Times：Hegseth taps three to lead Future of Warfare project</a>，2026-10-02</li><li><a href="https://www.stripes.com/theaters/us/2026-10-01/elon-musk-project-meridian-23025679.html" target="_blank" rel="noopener noreferrer">Stars and Stripes：Elon Musk, Project Meridian</a>，2026-10-01</li><li><a href="https://www.defensedaily.com/tech-execs-former-defense-officials-picked-for-pentagons-project-meridian-future-warfare-panel/pentagon/" target="_blank" rel="noopener noreferrer">Defense Daily：Project Meridian panel</a>，2026-10-06</li><li><a href="https://english.adnkronos.com/2026/08/07/takaichi-refrains-from-denying-revision-of-nonnuclear-principles/" target="_blank" rel="noopener noreferrer">Jiji／Adnkronos：Takaichi refrains from denying revision of nonnuclear principles</a>，2026-08-07</li></ul>
+</article></main>
+<footer>
+<p>本頁為對 Bloomberg Tech 專訪的非官方導讀，影片版權屬原頻道。本導讀的分析、翻譯、撰稿、查證與審稿皆由 AI 模型完成，並非人類分析，未經人工逐句校稿（分工見〈製作說明〉）。內容資料截至 2026-11-02。</p>
+</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+</body>
+</html>

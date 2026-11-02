@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電</title>
+<meta name="description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：哪些說法查得到，哪些只是他的看法。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電">
+<meta property="og:description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：哪些說法查得到，哪些只是他的看法。">
+<meta property="og:image" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電">
+<meta name="twitter:description" content="Bloomberg Tech 專訪 Palmer Luckey 談 Anduril 與高通的 BlueChip 美國製筆電：哪些說法查得到，哪些只是他的看法。">
+<meta name="twitter:image" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/luckey-qualcomm-american-laptop/">
+<script>document.documentElement.className+=' js';</script>
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:var(--fs,17px)/1.6 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+:root{--fs:17px}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.slide{max-width:900px;margin:0 auto;padding:40px 20px;border-bottom:1px solid var(--line)}
+.slide-inner{width:100%}
+.slide h1{margin:0 0 .4em;font-size:calc(var(--fs)*2.1);line-height:1.25;text-wrap:balance}
+.slide h2{margin:0 0 .6em;font-size:calc(var(--fs)*1.55);line-height:1.3;text-wrap:balance;
+  border-left:6px solid var(--accent);padding-left:.55em}
+.slide h3{margin:1em 0 .3em;font-size:calc(var(--fs)*1.15)}
+.slide p{margin:0 0 .8em}
+.slide ul,.slide ol{margin:0 0 .9em;padding-left:1.3em}
+.slide li{margin:.3em 0}
+.slide strong{font-weight:700;color:var(--accent-ink)}
+.slide code{background:var(--code);padding:.05em .35em;border-radius:5px;font:.88em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+.eyebrow{margin:0 0 .4em;color:var(--accent-ink);font-weight:700;font-size:.8em}
+p.lede{color:var(--muted);font-size:1em}
+.byline{color:var(--muted);font-size:.78em}
+aside.note{background:var(--note);border-left:5px solid var(--accent);border-radius:8px;padding:.6em .9em;margin:0 0 .9em;font-size:.88em}
+aside.note p,aside.note ul{margin:0 0 .4em}
+ol.takeaways{padding-left:1.5em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources{font-size:.7em;line-height:1.5}
+ul.sources li{overflow-wrap:anywhere}
+.slide figure{margin:.6em auto;max-width:100%;text-align:center}
+.slide figure img{display:block;margin:0 auto;max-width:100%;height:auto;border-radius:10px;box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+.slide figcaption{margin:.5em auto 0;font-size:.62em;line-height:1.5;color:var(--muted)}
+.slide p.figcap{font-size:.62em;color:var(--muted);text-align:center}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px}
+.mermaid-scroll pre{margin:0;font:.7em/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 .9em;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;font-size:.72em;line-height:1.45}
+.table-scroll th,.table-scroll td{padding:.45em .7em;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note)}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.layout-cover .slide-inner,.layout-section .slide-inner{text-align:center}
+.layout-cover h1{font-size:calc(var(--fs)*2.5)}
+.layout-section h2{border-left:0;padding-left:0;font-size:calc(var(--fs)*2.3)}
+.layout-section aside.note,.layout-cover aside.note{text-align:left;display:inline-block;max-width:34em}
+.layout-statement .slide-inner{max-width:30em}
+.layout-statement p{font-size:calc(var(--fs)*1.45);line-height:1.5}
+.controls{display:none}
+.progress{display:none}
+.js body{overflow:hidden}
+.js .deck{position:fixed;inset:0;display:grid;place-items:center}
+.js .stage{position:relative;container-type:size;width:min(100vw,calc(100dvh*16/9));height:min(100dvh,calc(100vw*9/16));overflow:hidden;background:var(--bg)}
+.js .slide{--fs:clamp(14px,1.85cqw,36px);position:absolute;inset:0;max-width:none;margin:0;border:0;
+  padding:5cqh 7cqw 10cqh;display:flex;overflow-y:auto;visibility:hidden}
+.js .slide.is-current{visibility:visible}
+.js .slide-inner{margin:auto}
+.js .slide figure img{max-height:46cqh;width:auto}
+.js .layout-cover figure img{max-height:34cqh}
+.js .controls{display:flex;position:fixed;right:16px;bottom:12px;gap:8px;align-items:center;z-index:60;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);border:1px solid var(--line);border-radius:999px;padding:4px 8px}
+.controls button{min-width:44px;min-height:44px;border:0;border-radius:999px;background:transparent;color:var(--ink);font:inherit;font-size:20px;cursor:pointer}
+.controls button:hover:not(:disabled){background:var(--note)}
+.controls button:disabled{opacity:.35;cursor:default}
+.controls .counter{min-width:4.5em;text-align:center;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.js .progress{display:block;position:fixed;left:0;right:0;top:0;height:4px;background:var(--line);z-index:60}
+.js .progress i{display:block;height:100%;width:0;background:var(--accent)}
+@media (prefers-reduced-motion:no-preference){
+  .js .slide.is-current{animation:slidein .25s ease-out}
+  @keyframes slidein{from{opacity:0;transform:translateX(14px)}to{opacity:1;transform:none}}
+}
+@media (max-width:640px){
+  .js .deck{display:block}
+  .js .stage{container-type:normal;width:100vw;height:100dvh}
+  .js .slide{--fs:17px;padding:28px 18px 92px}
+  .js .slide figure img{max-height:none;width:100%}
+  .js .controls{left:50%;right:auto;transform:translateX(-50%);bottom:10px}
+  .slide h2{border-left-width:5px}
+  .table-scroll table{min-width:520px}
+}
+@media print{
+  .js body{overflow:visible}
+  .js .deck,.js .stage{position:static;width:auto;height:auto;display:block;overflow:visible}
+  .js .slide{position:static;visibility:visible;page-break-after:always;--fs:14pt;padding:0;display:block;overflow:visible}
+  .controls,.progress,.lightbox{display:none!important}
+}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+
+/* ===== 簡報客製樣式（deep-guide-slides extra_css_file）===== */
+:root{
+  --bg:#0A0F1E;--surface:#121A30;--ink:#EAF0FF;--muted:#9AA8C7;--line:#243050;
+  --accent:#4D7CFF;--accent-ink:#9DB8FF;--link:#8DB2FF;--note:#16203D;--code:#1A2547;
+  --amber:#FFB84D;--shadow:0 18px 50px rgba(0,0,0,.45);
+  --serif:"Noto Serif TC","Songti TC","Source Han Serif TC","PMingLiU",serif;
+  --c-conf:#5BE3A8;--b-conf:rgba(61,220,151,.14);
+  --c-self:#B9C5E2;--b-self:rgba(154,168,199,.16);
+  --c-single:#8FB0FF;--b-single:rgba(77,124,255,.17);
+  --c-dispute:#FF9494;--b-dispute:rgba(255,107,107,.15);
+  --c-partial:#7FDDE0;--b-partial:rgba(80,200,210,.15);
+  --c-nf:#FFC66D;--b-nf:rgba(255,184,77,.15);
+  --c-gap:#FFA36B;--b-gap:rgba(255,140,60,.16);
+  --c-note:#CDB0FF;--b-note:rgba(176,140,255,.17);
+  --glow1:rgba(77,124,255,.20);--glow2:rgba(255,184,77,.08);
+}
+@media (prefers-color-scheme:light){
+  :root{
+    --bg:#F5F6FB;--surface:#FFFFFF;--ink:#0E1530;--muted:#51608A;--line:#D5DAEC;
+    --accent:#2347D6;--accent-ink:#1A38B0;--link:#1A3FC7;--note:#E9EDFA;--code:#E6EAF7;
+    --amber:#B86A00;--shadow:0 14px 40px rgba(20,30,70,.14);
+    --c-conf:#086B47;--b-conf:rgba(11,127,85,.12);
+    --c-self:#44527A;--b-self:rgba(68,82,122,.12);
+    --c-single:#1F42C4;--b-single:rgba(35,71,214,.11);
+    --c-dispute:#B02A2A;--b-dispute:rgba(194,48,48,.10);
+    --c-partial:#0B6E78;--b-partial:rgba(11,110,120,.11);
+    --c-nf:#8A5200;--b-nf:rgba(184,106,0,.12);
+    --c-gap:#A3490B;--b-gap:rgba(200,90,20,.12);
+    --c-note:#5B33B8;--b-note:rgba(110,70,200,.11);
+    --glow1:rgba(35,71,214,.10);--glow2:rgba(184,106,0,.06);
+  }
+}
+body{font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;font-feature-settings:"palt" 0}
+.slide h1,.slide h2,.layout-stat strong{font-family:var(--serif)}
+.slide h2{word-break:keep-all;overflow-wrap:anywhere;border:0;padding:0;font-weight:700;letter-spacing:.01em;font-size:calc(var(--fs)*1.85);line-height:1.28}
+.slide strong{color:var(--ink);font-weight:700;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--amber) 34%,transparent) 0)}
+.slide li::marker{color:var(--accent-ink)}
+.slide ul{list-style:none;padding-left:0}
+.slide ul li{position:relative;padding-left:1.1em;margin:.2em 0}
+.js .slide h2{margin-bottom:.45em}.js .kicker{margin-bottom:.8em}
+.slide ul li::before{content:"";position:absolute;left:0;top:.72em;width:.5em;height:2px;background:var(--accent)}
+.slide ul.sources li::before{display:none}
+.slide ul.sources li{padding-left:0}
+/* 標示徽章（JS 轉換；無 JS 時維持純文字） */
+.tag{display:inline-block;font:700 .68em/1.35 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.04em;padding:.14em .6em;border-radius:999px;vertical-align:.12em;margin:0 .15em;white-space:nowrap}
+.t-conf{color:var(--c-conf);background:var(--b-conf)}.t-self{color:var(--c-self);background:var(--b-self)}
+.t-single{color:var(--c-single);background:var(--b-single)}.t-dispute{color:var(--c-dispute);background:var(--b-dispute)}
+.t-partial{color:var(--c-partial);background:var(--b-partial)}.t-nf{color:var(--c-nf);background:var(--b-nf)}
+.t-gap{color:var(--c-gap);background:var(--b-gap)}.t-note{color:var(--c-note);background:var(--b-note)}
+/* 表格 */
+.table-scroll{background:color-mix(in srgb,var(--surface) 86%,transparent);border-color:var(--line);box-shadow:var(--shadow)}
+.table-scroll th{background:transparent;color:var(--muted);font-size:.85em;letter-spacing:.08em;border-bottom:1px solid var(--line)}
+.table-scroll td{border-bottom-color:var(--line)}
+.table-scroll td:first-child{font-weight:600;color:var(--ink)}
+@media (min-width:641px){.js .table-scroll table{font-size:.8em}}
+.table-scroll td.k{font-weight:600}
+/* 重點引言 */
+aside.note{background:linear-gradient(90deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent 92%);border:0;border-left:4px solid var(--accent);
+  border-radius:4px 14px 14px 4px;font-weight:500;font-size:1.02em;line-height:1.6;padding:.7em 1em}
+.note-k{display:block;font:700 .62em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.14em;color:var(--accent-ink);margin-bottom:.45em}
+/* 圖 */
+.slide figure img{background:transparent;box-shadow:var(--shadow);border-radius:18px}
+.js .slide figure{margin-left:0;text-align:left}.js .slide figure img{margin:0}
+.js .slide figcaption{margin-left:0;text-align:left}
+.slide figcaption,.slide p.figcap,.slide figure+p em{color:var(--muted)}
+/* 章節標籤 */
+.kicker{display:flex;align-items:center;gap:.7em;margin:0 0 1.1em;font:600 .7em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.06em;color:var(--muted)}
+.kicker .no{color:var(--accent-ink);font-variant-numeric:tabular-nums;letter-spacing:.1em}
+.kicker::after{content:"";height:1px;width:3.2em;background:var(--line)}
+/* 簡報模式 */
+@media (min-width:641px){.js .slide{--fs:clamp(14px,1.75cqw,36px);font-size:var(--fs)}}
+.js .deck{background:radial-gradient(1100px 620px at 88% -8%,var(--glow1),transparent 62%),radial-gradient(900px 520px at -8% 112%,var(--glow2),transparent 60%),var(--bg)}
+.js .stage{background:transparent}
+.js .slide{align-items:center;padding:6cqh 8cqw 11cqh}
+.js .layout-content,.js .layout-figure,.js .layout-sources,.js .layout-colophon{align-items:flex-start;padding-top:8cqh}
+.js .layout-content .slide-inner,.js .layout-figure .slide-inner{margin-top:0}
+.js .slide-inner{margin:0 auto 0 0;max-width:80cqw;width:100%}
+.js .layout-content .slide-inner,.js .layout-figure .slide-inner{max-width:76cqw}
+.js .layout-content .slide-inner:not(:has(table)){max-width:min(76cqw,40em)}
+.js .layout-figure .slide-inner{max-width:78cqw}
+.js .slide figure img{max-height:40cqh}
+.js .layout-figure .slide-inner:has(ul) figure img{max-height:29cqh}
+.js .layout-figure .slide-inner:has(aside) figure img{max-height:38cqh}
+.legend{columns:2;column-gap:3cqw;font-size:.86em}.legend li{break-inside:avoid}
+.js .layout-figure .slide-inner:not(:has(ul,aside)) figure img{max-height:58cqh}
+.js .layout-sources .slide-inner,.js .layout-colophon .slide-inner{max-width:82cqw}
+.js .progress{height:3px;background:transparent}
+.js .progress i{background:linear-gradient(90deg,var(--accent),var(--amber));transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.js .controls{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+/* 封面 */
+.layout-cover .slide-inner{text-align:left;max-width:54cqw}
+.layout-cover h1{font-size:calc(var(--fs)*2.35);line-height:1.18;letter-spacing:.01em;
+  background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 55%,var(--accent-ink) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.layout-cover .eyebrow{letter-spacing:.1em;color:var(--accent-ink);font-size:.66em}
+.layout-cover .lede{font-size:1.05em;max-width:34em;color:var(--muted)}
+.layout-cover aside.note{display:block;max-width:34em;font-family:inherit;font-size:.78em;color:var(--muted)}
+.layout-cover{position:relative}
+.js .layout-cover::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:4.2cqw 4.2cqw;
+  -webkit-mask-image:radial-gradient(60% 70% at 78% 38%,#000 0,transparent 72%);mask-image:radial-gradient(60% 70% at 78% 38%,#000 0,transparent 72%);opacity:.7}
+.js .layout-cover .slide-inner{position:relative}
+.hint{position:absolute;left:8cqw;bottom:4.5cqh;font:500 .55em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.18em;color:var(--muted)}
+/* 封面晶片（JS 注入的裝飾 SVG） */
+.chip{position:absolute;right:8cqw;top:50%;width:30cqw;height:30cqw;transform:translateY(-50%);pointer-events:none;color:var(--accent)}
+.chip svg{width:100%;height:100%;overflow:visible}
+.chip .pin{stroke:currentColor;stroke-width:2;opacity:.55}
+.chip .die{fill:none;stroke:currentColor;stroke-width:2.5}
+.chip .track{fill:none;stroke:var(--line);stroke-width:14}
+.chip .ring{fill:none;stroke:currentColor;stroke-width:14;stroke-linecap:round;stroke-dasharray:100 100;stroke-dashoffset:10;transform:rotate(-90deg);transform-origin:50% 50%}
+.chip .gap{fill:none;stroke:var(--amber);stroke-width:14;stroke-linecap:round}
+/* 大數字頁 */
+.js .layout-stat .slide-inner{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);column-gap:4cqw;align-items:center;max-width:82cqw}
+.js .layout-stat .kicker,.js .layout-stat h2{grid-column:1/-1}
+.js .layout-stat .slide-inner>p:first-of-type{grid-column:1;grid-row:3 / span 8;margin:0}
+.js .layout-stat .slide-inner>p:first-of-type strong{word-break:keep-all;overflow-wrap:normal;display:block;font-size:calc(var(--fs)*var(--stat,3.4));line-height:1.04;font-weight:800;letter-spacing:-.01em;
+  background:linear-gradient(180deg,var(--ink),color-mix(in srgb,var(--accent) 80%,var(--ink)));-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.js .layout-stat .slide-inner>:not(.kicker):not(h2):not(:first-of-type){grid-column:2}
+.js .layout-stat .slide-inner>p:nth-of-type(2),.js .layout-stat .slide-inner>ul{grid-column:2;margin:0}
+.js .layout-stat .slide-inner>p:nth-of-type(2):last-child{font-size:1.02em}
+/* 其他 */
+.skip{background:#2B4FD0;color:#fff}
+.slide:focus{outline:none}
+/* 比例條（JS 注入，純裝飾） */
+.ratio{margin-top:1.1em;display:grid;gap:.5em;font-variant-numeric:tabular-nums}
+.ratio div{font-size:.62em;color:var(--muted);line-height:1.3}
+.ratio i{display:block;height:.7em;border-radius:99px;background:var(--accent);margin-top:.3em}
+.ratio .s i{background:var(--amber)}
+/* 動態 */
+@media (prefers-reduced-motion:no-preference){
+  .js .slide.is-current{animation:none}
+  .js .slide.is-current .slide-inner>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .js .slide.is-current .slide-inner>*:nth-child(1){animation-delay:.02s}
+  .js .slide.is-current .slide-inner>*:nth-child(2){animation-delay:.09s}
+  .js .slide.is-current .slide-inner>*:nth-child(3){animation-delay:.16s}
+  .js .slide.is-current .slide-inner>*:nth-child(4){animation-delay:.23s}
+  .js .slide.is-current .slide-inner>*:nth-child(5){animation-delay:.30s}
+  .js .slide.is-current .slide-inner>*:nth-child(n+6){animation-delay:.37s}
+  .js .slide.is-current li{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+  .js .slide.is-current li:nth-child(1){animation-delay:.2s}.js .slide.is-current li:nth-child(2){animation-delay:.3s}
+  .js .slide.is-current li:nth-child(3){animation-delay:.4s}.js .slide.is-current li:nth-child(4){animation-delay:.5s}
+  .js .slide.is-current li:nth-child(n+5){animation-delay:.6s}
+  .js .layout-cover::before{animation:drift 18s ease-in-out infinite alternate}
+  .js .slide.is-current .chip .ring{animation:draw 1.6s .3s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:10}}
+  @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes drift{from{background-position:0 0}to{background-position:4.2cqw 2.1cqw}}
+}
+@media (hover:none){.hint{display:none}}
+@media (prefers-reduced-motion:reduce){.js .progress i{transition:none}}
+.nb{white-space:nowrap}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* 手機 */
+@media (max-width:640px){
+  .js .slide{padding:26px 20px 96px;align-items:flex-start}
+  .js .slide-inner,.js .layout-content .slide-inner,.js .layout-figure .slide-inner,.js .layout-cover .slide-inner{max-width:none}
+  .slide h2{font-size:calc(var(--fs)*1.45)}
+  .layout-cover h1{font-size:calc(var(--fs)*1.95)}
+  .js .layout-stat .slide-inner{display:block}
+  .js .layout-stat .slide-inner>p:first-of-type strong{font-size:calc(var(--fs)*var(--stat-m,2.8))}
+  .js .slide figure img{max-height:none}
+  .js .layout-figure .slide-inner figure img{max-height:none!important;width:100%}
+  .js .slide figure{margin-left:auto;text-align:center}
+  .legend{columns:1}
+  .slide figcaption,.slide p.figcap{font-size:.78em}
+  .hint,.chip{display:none}
+  .slide li,.slide p{overflow-wrap:break-word;word-break:normal;line-break:strict}
+  .table-scroll table{min-width:0;font-size:.78em}
+  .table-scroll th,.table-scroll td{padding:.5em .55em}
+  .tag{font-size:.7em}
+}
+/* 列印 */
+@media print{
+  .js .stage{container-type:normal;width:auto;height:auto}
+  .js .slide{--fs:13pt;font-size:13pt;padding:0 0 12pt;align-items:flex-start}
+  .js .slide-inner,.js .layout-content .slide-inner,.js .layout-figure .slide-inner,.js .layout-stat .slide-inner,.layout-cover .slide-inner{max-width:none;width:100%}
+  .js .layout-stat .slide-inner{display:block}
+  .slide figure img{max-height:none!important;width:auto;max-width:100%}
+  :root{--bg:#fff;--ink:#111;--muted:#444;--line:#ccc;--note:#f0f0f0;--surface:#fff;--accent-ink:#1a38b0;--link:#1a3fc7}
+  .js .stage{background:#fff}.js .layout-cover::before{display:none}
+  .layout-cover h1,.js .layout-stat .slide-inner>p:first-of-type strong{background:none;color:#111;-webkit-text-fill-color:#111}
+  :root{--c-conf:#0a7a52;--b-conf:#e3f4ec;--c-self:#44527a;--b-self:#e8ebf3;--c-single:#1f42c4;--b-single:#e6ecfb;--c-dispute:#b02a2a;--b-dispute:#fbe9e9;--c-partial:#0b6e78;--b-partial:#e1f2f4;--c-nf:#8a5200;--b-nf:#fbefdc;--c-gap:#a3490b;--b-gap:#fbeadf;--c-note:#5b33b8;--b-note:#efe9fa}
+  .kicker,.hint,.chip,.ratio{display:none}.slide strong{background:none}
+}
+
+/* ===== 第 6 輪：章節分隔頁、引言頁、卡片、編號列 ===== */
+.js .deck:has(.layout-section.is-current){background:linear-gradient(115deg,color-mix(in srgb,var(--accent) 16%,transparent),transparent 55%),radial-gradient(1100px 620px at 88% -8%,var(--glow1),transparent 62%),radial-gradient(900px 520px at -8% 112%,var(--glow2),transparent 60%),var(--bg)}
+.js .layout-section{align-items:flex-start;padding-top:30cqh}
+.layout-section .slide-inner{text-align:left;max-width:52cqw;position:relative}
+.layout-section h2{font-size:calc(var(--fs)*2.7);line-height:1.2;margin-bottom:.5em}
+.layout-section .slide-inner>p{color:var(--muted);font-size:1em;margin:0;max-width:26em}
+.dkick{font:600 .7em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.18em;color:var(--accent-ink);margin-bottom:1.4em;font-variant-numeric:tabular-nums}
+.dchip{opacity:.95}
+.dchip .dno{font:800 54px/1 var(--serif);fill:var(--ink);letter-spacing:.02em}
+.dchip .ring{stroke-dasharray:none;transform:rotate(-90deg);transform-origin:50% 50%;stroke-linecap:round}
+/* 引言頁 */
+.js .layout-statement{align-items:center}
+.layout-statement .tag{font-size:max(.3em,13px);font-family:"PingFang TC","Noto Sans TC",sans-serif}
+.layout-statement .slide-inner{max-width:min(70cqw,34em);text-align:left;position:relative}
+.layout-statement h2{font-family:"PingFang TC","Noto Sans TC",sans-serif;font-size:.78em;font-weight:600;letter-spacing:.16em;color:var(--accent-ink);margin:0 0 1.2em;line-height:1.3}
+.layout-statement p{font-family:var(--serif);font-size:calc(var(--fs)*2.05);line-height:1.5;font-weight:700;color:var(--ink);margin:0}
+.layout-statement p .nb{font-family:"PingFang TC","Noto Sans TC",sans-serif;font-size:.36em;font-weight:500;color:var(--muted)}
+/* 限制頁：卡片 */
+.js ul.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.1cqh 1.4cqw;margin:0;list-style:none}
+.js ul.cards li{margin:0;padding:1.1em 1.1em 1.2em;border:1px solid var(--line);border-radius:14px;background:color-mix(in srgb,var(--surface) 80%,transparent);font-size:.84em;line-height:1.55;box-shadow:var(--shadow)}
+.js ul.cards li::before{display:none}
+.js ul.cards .ct{display:block;font:700 1.08em/1.2 var(--serif);color:var(--accent-ink);margin-bottom:.45em}
+.js .layout-content .slide-inner:has(ul.cards){max-width:78cqw}
+/* 結論頁：2×2 卡片 */
+.js ul.cardgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4cqh 1.6cqw;list-style:none;margin:0;padding:0}
+.js ul.cardgrid li{margin:0;padding:1em 1.1em;border:1px solid var(--line);border-radius:16px;background:color-mix(in srgb,var(--surface) 82%,transparent);box-shadow:var(--shadow);font-size:.82em;line-height:1.55}
+.js ul.cardgrid li::before{display:none}
+.js ul.cardgrid .ch{margin-bottom:.55em}
+.js ul.cardgrid .ch .tag{font-size:.86em}
+.js .layout-content .slide-inner:has(ul.cardgrid){max-width:80cqw}
+/* 五件事：大號碼列表 */
+.js .slide ol{list-style:none;counter-reset:n;padding:0;margin:0 0 1em}
+.js .slide ol li{counter-increment:n;position:relative;display:block;padding:.45em 0 .45em 2.4em;border-bottom:1px solid var(--line);margin:0}
+.js .slide ol li::before{content:counter(n);position:absolute;left:0;top:.2em;font:800 1.7em/1 var(--serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.js .slide ol li:last-child{border-bottom:0}
+/* 分隔頁／引言頁：手機 */
+@media (max-width:640px){
+  .layout-section .slide-inner,.layout-statement .slide-inner,.js .layout-content .slide-inner:has(ul.cards,ul.cardgrid){max-width:none}
+  .js .layout-section{padding-top:22vh}
+  .layout-section h2{font-size:calc(var(--fs)*1.9)}
+  .js .layout-section,.js .layout-statement{align-items:flex-start}
+  .layout-statement p{font-size:calc(var(--fs)*1.5)}
+  .js ul.cards,.js ul.cardgrid{grid-template-columns:1fr}
+  .dchip{display:none}
+}
+@media (max-width:900px) and (min-width:641px){.js ul.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media print{
+  .js ul.cards,.js ul.cardgrid{display:block}
+    .js ul.cards li,.js ul.cardgrid li{box-shadow:none;margin:0 0 6pt}
+  .layout-statement p{font-size:20pt}.layout-section h2{font-size:24pt}
+  .dchip,.dkick{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .js .slide.is-current .dchip .ring{animation:dgrow 1.1s .15s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes dgrow{from{stroke-dasharray:0 100}}
+}
+.layout-cover .vid{font-size:.82em;max-width:36em;margin:1.1em 0 .9em;line-height:1.65}
+
+.slide p,.slide li{text-wrap:pretty}
+.layout-statement p .nb a{font-size:max(1em,14px)}
+
+/* ===== 封面主視覺（codex exec／imagegen 生成的示意插圖）===== */
+.cover-art{position:absolute;right:0;top:0;height:100%;width:100%;object-fit:cover;object-position:right center;pointer-events:none;transform:translateX(6%) scale(.93);transform-origin:right center;
+  -webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 52%);mask-image:linear-gradient(90deg,transparent 30%,#000 52%)}
+@media (min-width:641px){.layout-cover .slide-inner{max-width:47cqw}.js .layout-cover h1{font-size:calc(var(--fs)*2.05)}.layout-cover .vid{font-size:.74em;margin:.8em 0 .6em}.js .layout-cover .lede{font-size:.95em}}
+.js .layout-cover .chip{display:none}
+@media (prefers-color-scheme:light){
+  .cover-art{height:76%;top:12%;right:4cqw;width:42%;transform:none;border-radius:22px;box-shadow:var(--shadow);-webkit-mask-image:none;mask-image:none;object-position:center}
+}
+@media (max-width:640px){
+  .cover-art{position:relative;display:block;width:100%;height:30vh;transform:none;right:auto;top:auto;border-radius:16px;margin:0 0 18px;object-position:70% center;
+    -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent);box-shadow:none}
+}
+@media print{.cover-art{display:none}}
+/* ===== 片段 A（子代理交付，已合併）===== */
+/* ===== frag_A：左右對照版型（.cmp-；JS 才套用，無 JS 維持原條列）===== */
+.js .layout-content .slide-inner:has(.cmp){max-width:80cqw}
+.cmp{--cmp-say:var(--amber);--cmp-say-ink:var(--c-nf);--cmp-doc:var(--accent);--cmp-doc-ink:var(--accent-ink);
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.6cqh 1.8cqw;margin:.2em 0 0;align-items:stretch}
+.cmp.cmp-wide-r{grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+.cmp-col{--c:var(--cmp-say);--ci:var(--cmp-say-ink);position:relative;padding:1.05em 1.25em 1.1em 1.35em;border:1px solid var(--line);border-left:3px solid var(--c);
+  border-radius:4px 16px 16px 4px;box-shadow:var(--shadow);overflow:hidden;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--c) 9%,transparent),transparent 46%),color-mix(in srgb,var(--surface) 84%,transparent)}
+.cmp-doc{--c:var(--cmp-doc);--ci:var(--cmp-doc-ink)}
+.cmp-k{display:flex;align-items:center;gap:.55em;margin:0 0 .75em;font:700 .64em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.14em;color:var(--ci)}
+.cmp-k::before{content:"";width:.55em;height:.55em;border-radius:50%;background:var(--c);box-shadow:0 0 0 .28em color-mix(in srgb,var(--c) 22%,transparent)}
+.cmp-k::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 45%,transparent),transparent)}
+.cmp ul{margin:0;padding:0}
+.slide .cmp-col li{font-size:.88em;line-height:1.62;margin:0 0 .7em}
+.slide .cmp-col li:last-child{margin-bottom:0}
+.slide .cmp-col li+li{padding-top:.7em;border-top:1px dashed color-mix(in srgb,var(--line) 85%,transparent)}
+.slide .cmp-col li+li::before{top:calc(.7em + .72em)}
+.slide .cmp-col li::before{background:var(--c)}
+.cmp-foot{grid-column:1/-1;padding:.6em 1.2em!important;border-left:3px solid var(--c-note);border-radius:4px 12px 12px 4px;
+  background:linear-gradient(90deg,var(--b-note),transparent 85%)}
+.slide .cmp-foot li{margin:0;padding-left:0;font-size:.88em}
+.slide .cmp-foot li::before{display:none}
+@media (prefers-reduced-motion:no-preference){
+  .js .slide.is-current .cmp-col{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  .js .slide.is-current .cmp-col:nth-child(2){animation-delay:.14s}
+  .js .slide.is-current .cmp-foot{animation:rise .7s .28s cubic-bezier(.2,.7,.2,1) both}
+}
+@media (max-width:640px){
+  .js .layout-content .slide-inner:has(.cmp){max-width:none}
+  .cmp,.cmp.cmp-wide-r{grid-template-columns:minmax(0,1fr);gap:14px}
+  .cmp-col{padding:.9em 1em .95em 1.1em}
+  .slide .cmp-col li,.slide .cmp-foot li{font-size:.92em}
+}
+@media print{
+  .cmp,.cmp.cmp-wide-r{display:block}
+  .cmp-col{box-shadow:none;background:none;margin:0 0 6pt;break-inside:avoid}
+  .cmp-foot{background:none}
+}
+/* ===== 片段 C（子代理交付，已合併）===== */
+
+/* ===== frag_C：事實卡（第 12 頁）、大數字列（第 20 頁）、排版細修（第 4／9／22 頁）===== */
+/* 第 12 頁：三格事實卡 */
+.js .fact-slide .slide-inner{max-width:min(78cqw,46em)}
+.js .fact-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2cqw;margin:0 0 1.05em}
+.js .fact-card{position:relative;display:flex;flex-direction:column;gap:.3em;padding:.85em 1em .95em;border:1px solid var(--line);border-radius:14px;
+  background:color-mix(in srgb,var(--surface) 82%,transparent);box-shadow:var(--shadow);overflow:hidden}
+.js .fact-card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:var(--fact-c)}
+.js .fact-yes{--fact-c:var(--accent-ink)}
+.js .fact-no{--fact-c:var(--c-nf)}
+.fact-k{font:600 .62em/1.2 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.14em;color:var(--muted)}
+.fact-v{font:800 calc(var(--fs,16px)*2.05)/1.05 var(--serif);color:var(--fact-c);letter-spacing:.01em;word-break:keep-all}
+.fact-d{font-size:.66em;line-height:1.5;color:var(--muted);text-wrap:pretty}
+.js .fact-slide ul.fact-list{font-size:.9em}
+.js .fact-slide ul.fact-list li{margin:.15em 0}
+/* 第 20 頁：大數字列 */
+.js .num-row{display:grid;grid-template-columns:repeat(3,max-content) minmax(0,1fr);column-gap:clamp(1.2em,4cqw,3.2em);row-gap:.2em;align-items:end;
+  margin:0 0 .65em;padding:0 0 .6em;border-bottom:1px solid var(--line)}
+.num-cell{display:flex;flex-direction:column;gap:.25em;min-width:0}
+.num-n{display:flex;align-items:baseline;gap:.22em;white-space:nowrap}
+.num-v{font:800 calc(var(--fs,16px)*2.05)/1 var(--serif);letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--ink);
+  background:linear-gradient(180deg,var(--ink),color-mix(in srgb,var(--accent) 80%,var(--ink)));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.slide .num-v{background-color:transparent}
+.num-u{font:700 .8em/1 var(--serif);color:var(--accent-ink)}
+.num-k{font:500 .62em/1.35 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.06em;color:var(--muted)}
+.num-src{justify-self:end;text-align:right;padding-bottom:.15em;white-space:nowrap;font:600 .56em/1 "PingFang TC","Noto Sans TC",sans-serif;letter-spacing:.12em;color:var(--muted)}
+.js .num-slide ul{font-size:.9em}
+.js .num-slide ul li{margin:.1em 0}
+.js .num-slide aside.note{font-size:.92em;margin-top:.7em;padding:.6em .95em}
+/* 第 9 頁：大數字與條列同樣靠上對齊 */
+.js .layout-stat[data-title^="封裝有補貼"] .slide-inner{align-items:start}
+.js .layout-stat[data-title^="封裝有補貼"] .slide-inner>p:first-of-type{align-self:start;padding-top:.1em}
+/* 第 22 頁（及其他表格）：表內徽章至少 11px */
+.table-scroll .tag{font-size:max(.68em,11px)}
+/* 第 4 頁：圖例改格線，兩欄逐列對齊；「原影片」貼成來源列 */
+.js ul.fact-legend{columns:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(var(--fact-rows,4),auto);
+  grid-auto-flow:column;column-gap:3cqw;row-gap:.1em;align-items:baseline;margin:1em 0 0}
+.js ul.fact-legend li{margin:.18em 0}
+.js .fact-srcline{margin:.7em 0 0;padding-top:.65em;border-top:1px solid var(--line);font-size:.78em;letter-spacing:.04em}
+.js .fact-srcline a{text-underline-offset:.22em}
+.js .fact-srcline a::after{content:" ↗"/"";text-decoration:none;display:inline-block;margin-left:.15em}
+/* 動態（尊重 reduced-motion） */
+@media (prefers-reduced-motion:no-preference){
+  .js .slide.is-current .fact-card,.js .slide.is-current .num-cell{animation:rise .6s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.18s + var(--fact-i,var(--num-i,0))*.09s)}
+}
+/* 手機：單欄 */
+@media (max-width:640px){
+  .js .fact-slide .slide-inner{max-width:none}
+  .js .fact-row{grid-template-columns:1fr;gap:10px}
+  .js .fact-card{display:grid;grid-template-columns:auto 1fr;column-gap:.8em;align-items:baseline;padding:.75em .9em}
+  .js .fact-card .fact-k{grid-column:1/-1}
+  .fact-v{font-size:calc(var(--fs,16px)*1.6)}
+  .fact-d{font-size:.78em}
+  .js .num-row{grid-template-columns:1fr;row-gap:.7em}
+  .num-src{justify-self:start;text-align:left}
+  .num-v{font-size:calc(var(--fs,16px)*2.1)}
+  .num-k{font-size:.72em}
+  .js ul.fact-legend{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+}
+/* 列印：摘要卡與數字列是原文的重複，隱藏；原條列照常印出 */
+@media print{
+  .fact-row,.num-row{display:none!important}
+  .js ul.fact-legend{display:block;columns:2}
+  .js .fact-srcline a::after{content:none}
+}
+/* ===== 片段 B（子代理交付，已合併）===== */
+
+/* ===== frag_B：迷你晶片導覽、換頁轉場、分隔頁標題、手機封面晶片 ===== */
+/* 分隔頁標題：「第N幕：」固定獨佔第一行 */
+.layout-section h2 .vt-secpre{display:block}
+
+/* 迷你晶片：內容頁右上角（JS 注入、aria-hidden；封面與分隔頁隱藏） */
+.mini-chip{position:absolute;z-index:5;top:3.6cqh;right:2.4cqw;width:clamp(40px,3.9cqw,72px);height:clamp(40px,3.9cqw,72px);
+  pointer-events:none;color:var(--accent);opacity:0;visibility:hidden;transform:scale(.86);
+  transition:opacity .35s ease,transform .5s cubic-bezier(.2,.7,.2,1),visibility 0s linear .35s}
+.mini-chip.is-on{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.mini-chip svg{display:block;width:100%;height:100%;overflow:visible}
+.mini-die{fill:color-mix(in srgb,var(--surface) 70%,transparent);stroke:currentColor;stroke-width:1.6}
+.mini-track{fill:none;stroke:var(--line);stroke-width:3.6}
+.mini-ring{fill:none;stroke:currentColor;stroke-width:3.6;stroke-linecap:round;stroke-dasharray:0 100;transform:rotate(-90deg);transform-origin:32px 32px;
+  transition:stroke-dasharray .9s cubic-bezier(.2,.7,.2,1),opacity .3s ease}
+.mini-core{fill:var(--accent-ink)}
+.mini-pin{stroke:var(--line);stroke-width:1.8;stroke-linecap:round;transition:stroke .3s ease;transition-delay:calc(var(--i)*22ms)}
+.mini-pin.is-lit{stroke:var(--amber)}
+.mini-chip.is-appx{color:var(--muted)}
+.mini-chip.mini-init,.mini-chip.mini-init *{transition:none!important}
+
+/* View Transitions：凍結期間舊頁保持可見、新頁透明（JS 只在擷取舊畫面的一兩個影格內加上） */
+.js .stage.vt-freeze .slide.is-current{opacity:0!important}
+.js .stage.vt-freeze .slide[data-vt-old]{visibility:visible!important}
+/* 晶片接力：分隔頁／封面的大晶片 ↔ 迷你晶片共用同一個名稱，瀏覽器自動補間位置與大小 */
+.js .stage:not(.vt-freeze) .slide.is-current>.chip,
+.js .stage.vt-freeze .slide[data-vt-old]>.chip,
+.js .stage:not(.vt-freeze) .mini-chip.is-on,
+.js .stage.vt-freeze .mini-chip.is-on{view-transition-name:vt-chip}
+.js .stage:not(.vt-freeze) .slide.is-current .kicker,
+.js .stage.vt-freeze .slide[data-vt-old] .kicker{view-transition-name:vt-kicker}
+.js .controls{view-transition-name:vt-ctrl}
+.js .progress{view-transition-name:vt-bar}
+html.vt-run .mini-chip{transition:none}
+@media (prefers-reduced-motion:no-preference){
+  ::view-transition-old(root){animation:vt-out .22s cubic-bezier(.4,0,1,1) both}
+  ::view-transition-new(root){animation:vt-in .5s .14s cubic-bezier(.2,.7,.2,1) both}
+  html[data-vt-dir="back"]::view-transition-old(root){animation-name:vt-out-b}
+  html[data-vt-dir="back"]::view-transition-new(root){animation-name:vt-in-b}
+  ::view-transition-group(vt-chip){animation-duration:.72s;animation-timing-function:cubic-bezier(.65,0,.15,1)}
+  ::view-transition-old(vt-chip),::view-transition-new(vt-chip){animation-duration:.72s;animation-timing-function:cubic-bezier(.65,0,.15,1)}
+  ::view-transition-group(vt-kicker){animation-duration:.4s}
+  ::view-transition-group(vt-ctrl),::view-transition-group(vt-bar){animation-duration:.3s}
+  @keyframes vt-out{to{opacity:0;transform:translateX(-1.6vw)}}
+  @keyframes vt-in{from{opacity:0;transform:translateX(2.2vw)}}
+  @keyframes vt-out-b{to{opacity:0;transform:translateX(1.6vw)}}
+  @keyframes vt-in-b{from{opacity:0;transform:translateX(-2.2vw)}}
+}
+@media (prefers-reduced-motion:reduce){
+  .mini-chip,.mini-chip *{transition:none!important}
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}
+
+/* 手機：迷你晶片移到左下角（與置中的翻頁鈕不重疊），封面補簡化版晶片 */
+@media screen and (max-width:640px){
+  .mini-chip{position:fixed;top:auto;right:auto;left:12px;bottom:10px;width:54px;height:54px;padding:6px;box-sizing:border-box;border-radius:16px;
+    background:color-mix(in srgb,var(--bg) 88%,transparent);border:1px solid var(--line);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--shadow)}
+  .js .layout-cover{flex-direction:column}
+  .js .layout-cover>.chip{display:block;position:relative;right:auto;top:auto;transform:none;width:76px;height:76px;flex:none;margin:0 0 16px}
+  .js .layout-cover>.chip .pin:nth-of-type(8n+5),.js .layout-cover>.chip .pin:nth-of-type(8n+6),
+  .js .layout-cover>.chip .pin:nth-of-type(8n+7),.js .layout-cover>.chip .pin:nth-of-type(8n+8){display:none}
+  .js .layout-cover>.chip .pin{stroke-width:6;opacity:.6}
+  .js .layout-cover>.chip .die{stroke-width:7}
+  .js .layout-cover>.chip .track,.js .layout-cover>.chip .ring,.js .layout-cover>.chip .gap{stroke-width:18}
+}
+@media print{.mini-chip{display:none!important}}
+
+/* 封面改用 AI 生成主視覺，不顯示晶片（含手機） */
+.js .layout-cover .chip,.js .layout-cover .chip.mcover{display:none!important}
+
+/* ===== 第 7 輪修正 ===== */
+.cover-cap{position:absolute;right:3cqw;bottom:4.5cqh;font:500 .56em/1.3 "PingFang TC","Noto Sans TC",sans-serif;color:var(--muted);background:color-mix(in srgb,var(--bg) 70%,transparent);padding:.35em .7em;border-radius:99px;pointer-events:none}
+@media (max-width:640px){.cover-cap{position:relative;right:auto;bottom:auto;display:inline-block;margin:-6px 0 14px;font-size:.7em}}
+@media print{.cover-cap{display:none}}
+.layout-statement p{text-wrap:balance}
+.cmp{align-items:start}
+@media (max-width:640px){.js .slide{padding-bottom:132px}}
+
+@media (min-width:641px){.js .fact-slide .fact-row{margin-bottom:.7em}.js .fact-card{padding:.6em .9em .65em}.js .fact-slide ul.fact-list{font-size:.84em}.js .fact-slide h2{margin-bottom:.3em}}
+
+/* ===== 第 9 輪 ===== */
+.ratio .u i{background:repeating-linear-gradient(135deg,color-mix(in srgb,var(--accent) 55%,transparent) 0 8px,transparent 8px 14px);outline:1.5px dashed var(--accent);outline-offset:-1.5px}
+@media (max-width:640px){
+  .js .deck::after{content:"";position:fixed;left:0;right:0;bottom:0;height:104px;background:linear-gradient(transparent,var(--bg) 72%);pointer-events:none;z-index:2}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#deck">跳到簡報</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<main class="deck" id="deck" aria-label="簡報：九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電">
+<div class="stage">
+<section class="slide layout-cover" id="slide-1" data-title="九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電" aria-label="第 1 頁，共 30 頁：九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電"><div class="slide-inner">
+<p class="eyebrow">深度導讀（簡報版）</p>
+<h1>九成來自美國與盟友，面板還在海外：Luckey 談 BlueChip 美國製筆電</h1>
+<p class="lede">Bloomberg Tech 專訪 Anduril 創辦人 Palmer Luckey（2026-10-27）逐頁導讀：他想說什麼，以及與現況哪裡不同</p>
+<p class="byline">整理：2026-11-02　資料截至 2026-11-02</p>
+<p>影片：<a href="https://www.youtube.com/watch?v=a2wv9giz3vU" target="_blank" rel="noopener noreferrer">Bloomberg Tech 專訪 Palmer Luckey（YouTube，14:43）</a>。本簡報的時間點（如 <a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=252s" target="_blank" rel="noopener noreferrer">04:12</a>）都指這支影片，可點開對照；也有<a href="player.html">雙語字幕播放器</a>與<a href="translation-zh.html">全文譯本</a>。</p>
+<aside class="note"><p>本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿；依 YouTube 機器字幕製作，未對照原音。模型分工見文末〈製作說明〉，重要說法都附來源連結，請以來源為準。</p></aside>
+</div></section>
+<section class="slide layout-stat" id="slide-2" data-title="一台筆電，只有九成" aria-label="第 2 頁，共 30 頁：一台筆電，只有九成"><div class="slide-inner">
+<h2 id="s2-h1">一台筆電，只有九成</h2>
+<p><strong>90%</strong></p>
+<p>主持人開場說這是「100% 美國製造電腦」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=252s" target="_blank" rel="noopener noreferrer">04:12</a>）。Luckey 說目前整機大約九成來自美國及其盟友，面板在「另一個國家」製造；他說有「明確達到 100% 美國本土製造的技術藍圖」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=436s" target="_blank" rel="noopener noreferrer">07:16</a>）。</p>
+</div></section>
+<section class="slide layout-content" id="slide-3" data-title="三十秒版：他想說的五件事" aria-label="第 3 頁，共 30 頁：三十秒版：他想說的五件事"><div class="slide-inner">
+<h2 id="s3-h1">三十秒版：他想說的五件事</h2>
+<ul><li>國家最關鍵的系統不該跑在最大戰略對手做的電腦上，所以 Anduril 自己做了 BlueChip。</li><li>先賣給政府與關鍵產業；軍規做得到，其他人的需求就綽綽有餘。</li><li>美國的半導體補貼只補到晶片，把晶片封裝、做成產品的環節沒人能做。</li><li>現況約九成來自美國及盟友，面板在另一個國家；他說有 100% 的技術藍圖，但還不能說是哪家公司。</li><li>他自己被中國制裁，正因如此 Anduril 早已學會不靠中國；他共同主持的 Meridian 要看未來戰爭，他對採購的看法是快買、不再有用就停。</li></ul>
+<p>他的說法與現況有出入的地方，集中放在第二幕。</p>
+</div></section>
+<section class="slide layout-content" id="slide-4" data-title="這場訪談是直播，字幕是機器聽的" aria-label="第 4 頁，共 30 頁：這場訪談是直播，字幕是機器聽的"><div class="slide-inner">
+<h2 id="s4-h1">這場訪談是直播，字幕是機器聽的</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">項目</th><th scope="col">內容</th></tr></thead><tbody><tr><td class="k" data-label="項目">節目</td><td data-label="內容">Bloomberg Tech，主持人 Ed Ludlow；2026-10-27 播出，片長 14 分 43 秒</td></tr><tr><td class="k" data-label="項目">受訪者</td><td data-label="內容">Palmer Luckey，Anduril 創辦人</td></tr><tr><td class="k" data-label="項目">時間點</td><td data-label="內容">期中選舉（2026-11-03）前一週</td></tr><tr><td class="k" data-label="項目">字幕</td><td data-label="內容">YouTube 自動字幕，無說話者標記，未對照原音</td></tr></tbody></table></div>
+<p>第一幕整理 Luckey 在訪談裡說的話；第二幕集中對照文件與報導，並用下面的標示說明可信度：</p>
+<ul><li>（已確認）有官方或一手文件，且與說法吻合</li><li>（當事方自揭）只有 Luckey 或 Anduril 自己說</li><li>（單方說法）只有單一來源</li><li>（有爭議）來源之間互相衝突</li><li>（部分確認）只有一部分有來源支持</li><li>（未找到）找不到出處</li><li>（有落差）與來源的內容不同</li><li>（本文歸納）本文自己的整理與判斷</li></ul>
+</div></section>
+<section class="slide layout-section" id="slide-5" data-title="第一幕：Luckey 想說的事" aria-label="第 5 頁，共 30 頁：第一幕：Luckey 想說的事"><div class="slide-inner">
+<h2 id="s5-h1">第一幕：Luckey 想說的事</h2>
+<p>依主題整理他的主張，時間點可點開對照。</p>
+</div></section>
+<section class="slide layout-content" id="slide-6" data-title="他說做電腦，是為了不依賴最大的戰略對手" aria-label="第 6 頁，共 30 頁：他說做電腦，是為了不依賴最大的戰略對手"><div class="slide-inner">
+<h2 id="s6-h1">他說做電腦，是為了不依賴最大的戰略對手</h2>
+<ul><li>他舉軍方、醫院、發電廠為例，說很多人打造的東西跑在中國製造的電腦上；讓整個國家最關鍵的經濟命脈依賴最大的戰略對手，「簡直是瘋了」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=55s" target="_blank" rel="noopener noreferrer">00:55</a>）。</li><li>Anduril 原本沒打算做電腦；先找別人投資沒成功，因為他「不能去做銷售受中國設備控制的自主武器這種生意」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=69s" target="_blank" rel="noopener noreferrer">01:09</a>），最後自己出錢。</li><li>他說他們要「把矽帶回矽谷」，與美國最頂尖的公司合作，打造從晶片、玻璃、金屬、電池到塑膠「所有的一切」都是美國製造的電腦（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=80s" target="_blank" rel="noopener noreferrer">01:20</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=81s" target="_blank" rel="noopener noreferrer">01:21</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=91s" target="_blank" rel="noopener noreferrer">01:31</a>）。</li><li>本文歸納：<strong>BlueChip 先是 Anduril 自己用得上的東西</strong>，才談得上是商品。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-7" data-title="先賣政府與關鍵產業" aria-label="第 7 頁，共 30 頁：先賣政府與關鍵產業"><div class="slide-inner">
+<h2 id="s7-h1">先賣政府與關鍵產業</h2>
+<ul><li>先從軍用開始，因為散熱、防震、防水防塵與安全性的要求最嚴苛；「如果我能造出一台符合軍方需求的電腦，要滿足其他所有人的需求就綽綽有餘」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=120s" target="_blank" rel="noopener noreferrer">02:00</a>）。</li><li>目前專注政府，接著是處理機密資料的國防公司與電網等關鍵產業，他們「不能讓外國對手在他們的機器中植入後門」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=154s" target="_blank" rel="noopener noreferrer">02:34</a>）。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-8" data-title="他說：補貼只補到晶片，沒人能做成產品" aria-label="第 8 頁，共 30 頁：他說：補貼只補到晶片，沒人能做成產品"><div class="slide-inner">
+<h2 id="s8-h1">他說：補貼只補到晶片，沒人能做成產品</h2>
+<ul><li>「高通已經宣布他們將在亞利桑那州製造晶片」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=200s" target="_blank" rel="noopener noreferrer">03:20</a>）。</li><li>但光有晶片不夠：美國對半導體的補貼與投資，「我們根本沒有任何能力去封裝它們，並將它們轉化為有用的產品」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=207s" target="_blank" rel="noopener noreferrer">03:27</a>）。</li><li>「從某種角度來看」，美國的半導體補貼實際上只是在補貼中國製造的筆記型電腦，因為晶片都是送到那裡才被做成產品的（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=217s" target="_blank" rel="noopener noreferrer">03:37</a>）。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-9" data-title="他說：分析師的天價估算，是在替外包的大企業維持現狀" aria-label="第 9 頁，共 30 頁：他說：分析師的天價估算，是在替外包的大企業維持現狀"><div class="slide-inner">
+<h2 id="s9-h1">他說：分析師的天價估算，是在替外包的大企業維持現狀</h2>
+<ul><li>他先說自己的看法比幾乎任何人都更務實（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=276s" target="_blank" rel="noopener noreferrer">04:36</a>）。</li><li>分析師說美國製 iPhone 要 37,000 美元、美國電腦要 100,000 美元，他認為這是問題之一，是在替想繼續外包的大企業維持現狀（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=280s" target="_blank" rel="noopener noreferrer">04:40</a>）。</li><li>他說「我們不會再任由別人對美國能做什麼和不能做什麼說謊了」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=340s" target="_blank" rel="noopener noreferrer">05:40</a>）。</li></ul>
+</div></section>
+<section class="slide layout-figure" id="slide-10" data-title="他說：現在約九成來自美國與盟友，面板還在海外" aria-label="第 10 頁，共 30 頁：他說：現在約九成來自美國與盟友，面板還在海外"><div class="slide-inner">
+<h2 id="s10-h1">他說：現在約九成來自美國與盟友，面板還在海外</h2>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-ninety-mobile.svg"><img src="images/fig-ninety.svg" alt="整機來源比例示意：約 90% 來自美國及其盟友（Luckey 自述），其餘約 10%；面板在另一個國家製造；100% 美國本土製造是技術藍圖，沒有日期。" width="1200" height="470" loading="lazy" style="--ar-d:1200/470;--ar-m:600/560" tabindex="0" role="button" aria-label="放大圖片：整機來源比例示意：約 90% 來自美國及其盟友（Luckey 自述），其餘約 10%；面板在另一個國家製造；100% 美國本土製造是技術藍圖，沒有日期。"></picture><figcaption>圖：依 Luckey 自述整理，計算方式未說明。</figcaption></figure>
+<aside class="note"><p>重點：90% 是「美國及其盟友」，不是美國；Luckey 自己也把 100% 美國製造當作目標（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=81s" target="_blank" rel="noopener noreferrer">01:21</a>），九成只是現況。</p></aside>
+</div></section>
+<section class="slide layout-content" id="slide-11" data-title="他說：100% 只有「技術藍圖」，沒有日期，廠商也還不能說" aria-label="第 11 頁，共 30 頁：他說：100% 只有「技術藍圖」，沒有日期，廠商也還不能說"><div class="slide-inner">
+<h2 id="s11-h1">他說：100% 只有「技術藍圖」，沒有日期，廠商也還不能說</h2>
+<ul><li>主持人問：在零組件與原物料層面，把對中國的依賴降到 0，有可能嗎？（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=263s" target="_blank" rel="noopener noreferrer">04:23</a>）面板與 90% 是回答稍後另一題「你要說服誰在美國製造顯示器」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=395s" target="_blank" rel="noopener noreferrer">06:35</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=420s" target="_blank" rel="noopener noreferrer">07:00</a>）。</li><li>官方答案是 2027 年公布更多，他希望在 CES 能有進展可以宣布；目前和多家廠商洽談，已有計畫（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=405s" target="_blank" rel="noopener noreferrer">06:45</a>）。</li><li>他說有「明確達到 100% 美國本土製造的技術藍圖」，但還不能說是哪家公司，因為還在協商（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=436s" target="_blank" rel="noopener noreferrer">07:16</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=442s" target="_blank" rel="noopener noreferrer">07:22</a>）。</li></ul>
+</div></section>
+<section class="slide layout-statement" id="slide-12" data-title="他的類比：無人機就是電腦" aria-label="第 12 頁，共 30 頁：他的類比：無人機就是電腦"><div class="slide-inner">
+<h2 id="s12-h1">他的類比：無人機就是電腦</h2>
+<p>「Anduril 攻擊型無人機和筆記型電腦唯一的差別就只在於鍵盤和螢幕」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=328s" target="_blank" rel="noopener noreferrer">05:28</a>）</p>
+</div></section>
+<section class="slide layout-content" id="slide-13" data-title="他的本錢：無人機的整合經驗，加上軟體團隊" aria-label="第 13 頁，共 30 頁：他的本錢：無人機的整合經驗，加上軟體團隊"><div class="slide-inner">
+<h2 id="s13-h1">他的本錢：無人機的整合經驗，加上軟體團隊</h2>
+<ul><li>他說自己每天都在美國製造東西，Anduril 的無人機基本上就是電腦，有記憶體、GPU、CPU、感測器、電池與強固設計（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=320s" target="_blank" rel="noopener noreferrer">05:20</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=322s" target="_blank" rel="noopener noreferrer">05:22</a>）。</li><li>主持人問 Lattice 與製造怎麼平衡；Luckey 說 Anduril 做軟體的人比所有硬體產品團隊加起來還多（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=487s" target="_blank" rel="noopener noreferrer">08:07</a>），Lattice 是驅動戰鬥機、潛艦與飛彈的 AI 大腦（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=493s" target="_blank" rel="noopener noreferrer">08:13</a>）。</li><li>這台筆電不能只跑 Microsoft Office 和 Gmail，要相容許多 2000 年代、90 年代甚至 80 年代設計的政府舊應用程式，需要驅動程式介接已有數十年的舊系統，「這需要大量的軟體工作」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=501s" target="_blank" rel="noopener noreferrer">08:21</a>）。</li><li>他也提到公司名稱縮寫是 AI（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=480s" target="_blank" rel="noopener noreferrer">08:00</a>）。</li><li>本文歸納：除了美國製造，舊系統相容是最具體的產品差異，<strong>政府與關鍵產業能拿它直接接上舊設備</strong>。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-14" data-title="他說：BlueChip 在 Arsenal 1 生產，明年量產，價格還沒定" aria-label="第 14 頁，共 30 頁：他說：BlueChip 在 Arsenal 1 生產，明年量產，價格還沒定"><div class="slide-inner">
+<h2 id="s14-h1">他說：BlueChip 在 Arsenal 1 生產，明年量產，價格還沒定</h2>
+<ul><li>BlueChip 會在 Arsenal 1 與其他多個地點，和「大約兩打其他美國公司」一起製造；已在早期原型生產，明年進入量產（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=869s" target="_blank" rel="noopener noreferrer">14:29</a>）。</li><li>他沒給確切定價與交貨日期，說 AI 熱潮讓現在「也許」是歷史上最難預測晶片價格與交期的時期（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=843s" target="_blank" rel="noopener noreferrer">14:03</a>）。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-15" data-title="他說：被中國制裁，所以 Anduril 早已學會不靠中國" aria-label="第 15 頁，共 30 頁：他說：被中國制裁，所以 Anduril 早已學會不靠中國"><div class="slide-inner">
+<h2 id="s15-h1">他說：被中國制裁，所以 Anduril 早已學會不靠中國</h2>
+<ul><li>Luckey 說自己個人被制裁（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=356s" target="_blank" rel="noopener noreferrer">05:56</a>）：「照他們的說法，我是分裂主義者、是恐怖分子」；Anduril 同樣被制裁（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=361s" target="_blank" rel="noopener noreferrer">06:01</a>）。</li><li>因此公司必須發展出獨立於中國的生存模式；他說大多數美國公司聲稱做不到，「實際上只是不想做」，所以 Anduril 是能做到的合適公司（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=362s" target="_blank" rel="noopener noreferrer">06:02</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=369s" target="_blank" rel="noopener noreferrer">06:09</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=375s" target="_blank" rel="noopener noreferrer">06:15</a>）。</li><li>他說過去 10 年學會在不依賴外國對手的情況下打造先進系統，這是他有信心的原因（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=378s" target="_blank" rel="noopener noreferrer">06:18</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=387s" target="_blank" rel="noopener noreferrer">06:27</a>）。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-16" data-title="Meridian：三位共同主席、120 天，要看未來戰爭" aria-label="第 16 頁，共 30 頁：Meridian：三位共同主席、120 天，要看未來戰爭"><div class="slide-inner">
+<h2 id="s16-h1">Meridian：三位共同主席、120 天，要看未來戰爭</h2>
+<ul><li>他說這個計畫的指導委員會有三位共同主席（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=559s" target="_blank" rel="noopener noreferrer">09:19</a>），期程 120 天（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=566s" target="_blank" rel="noopener noreferrer">09:26</a>），約 20 人參與（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=556s" target="_blank" rel="noopener noreferrer">09:16</a>），由 MITRE 運作（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=570s" target="_blank" rel="noopener noreferrer">09:30</a>）；Axon 創辦人 Rick Smith 也是成員（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=582s" target="_blank" rel="noopener noreferrer">09:42</a>）。</li><li>主持人問報告是否 1 月提交（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=636s" target="_blank" rel="noopener noreferrer">10:36</a>）。他談的是 2040、2050 年的戰爭樣貌（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=665s" target="_blank" rel="noopener noreferrer">11:05</a>）。</li><li>他不想要一份智庫報告，不想「重複講著每個人過去 10 年來都知道的那五件事」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=614s" target="_blank" rel="noopener noreferrer">10:14</a>），希望聚焦原本可能不會受到關注的事。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-17" data-title="採購改革，他舉烏克蘭" aria-label="第 17 頁，共 30 頁：採購改革，他舉烏克蘭"><div class="slide-inner">
+<h2 id="s17-h1">採購改革，他舉烏克蘭</h2>
+<ul><li>被問到五角大廈有沒有可以做得不同的地方：「我認為他們可以，但我認為這其實不是這件事的核心重點」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=655s" target="_blank" rel="noopener noreferrer">10:55</a>）。</li><li>他舉烏克蘭：快速採購有用的東西，<strong>在東西不再有用時停止採購</strong>，這「也許是我們從烏克蘭看到的最重要的事情」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=694s" target="_blank" rel="noopener noreferrer">11:34</a>）。</li><li>他接著說大家都知道要這麼做，只是「知道自己胖」和「真正減重」之間有差別（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=710s" target="_blank" rel="noopener noreferrer">11:50</a>）。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-18" data-title="他說：預算不一定大改，日本也在談核武" aria-label="第 18 頁，共 30 頁：他說：預算不一定大改，日本也在談核武"><div class="slide-inner">
+<h2 id="s18-h1">他說：預算不一定大改，日本也在談核武</h2>
+<ul><li>距期中選舉剩 7 天，主持人問藍色浪潮的影響。Luckey：即使民主黨大勝，國防支出也不一定有巨大改變；他強調自己「我不是政治人物，我是個工程師」，這是專業領域之外的推測（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=763s" target="_blank" rel="noopener noreferrer">12:43</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=772s" target="_blank" rel="noopener noreferrer">12:52</a>）。</li><li>他說掌控國防預算的民主黨人理解，需要投資取代部分老舊系統（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=781s" target="_blank" rel="noopener noreferrer">13:01</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=789s" target="_blank" rel="noopener noreferrer">13:09</a>）。</li><li>他說意識到這點的不只美國：「日本現在也在談，要以毫無禁忌的態度討論修憲，好讓日本能夠在境內接納核武」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=797s" target="_blank" rel="noopener noreferrer">13:17</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=800s" target="_blank" rel="noopener noreferrer">13:20</a>）。</li><li>他說國防預算會增減，但紅藍兩方的大多數人都認同美國需要投資新技術（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=814s" target="_blank" rel="noopener noreferrer">13:34</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=819s" target="_blank" rel="noopener noreferrer">13:39</a>）。</li></ul>
+</div></section>
+<section class="slide layout-section" id="slide-19" data-title="第二幕：補述，他說的與現況" aria-label="第 19 頁，共 30 頁：第二幕：補述，他說的與現況"><div class="slide-inner">
+<h2 id="s19-h1">第二幕：補述，他說的與現況</h2>
+<p>集中對照文件與報導，只在這一幕提。</p>
+</div></section>
+<section class="slide layout-content" id="slide-20" data-title="補貼與供應鏈：他說的，與現況" aria-label="第 20 頁，共 30 頁：補貼與供應鏈：他說的，與現況"><div class="slide-inner">
+<h2 id="s20-h1">補貼與供應鏈：他說的，與現況</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">Luckey 說的</th><th scope="col">現況</th></tr></thead><tbody><tr><td data-label="Luckey 說的">補貼只補到晶片，沒人能封裝（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=207s" target="_blank" rel="noopener noreferrer">03:27</a>）</td><td data-label="現況">NIST（2024-12-20）：Amkor 亞利桑那公司最高 4.07 億美元，用於約 20 億美元的 Peoria 先進封裝與測試廠（<a href="https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor" target="_blank" rel="noopener noreferrer">NIST</a>）（已確認）；該廠是否已投產未知。終端產品組裝沒有找到對應的 CHIPS 補貼項目（未找到）。他把晶片封裝和終端組裝攪在一起，論點放在終端組裝比較站得住腳（本文歸納）</td></tr><tr><td data-label="Luckey 說的">高通已宣布在亞利桑那製造晶片（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=200s" target="_blank" rel="noopener noreferrer">03:20</a>）</td><td data-label="現況">TechCrunch 寫晶片由 TSMC 亞利桑那廠製造，高通自己的公告沒找到（部分確認）</td></tr><tr><td data-label="Luckey 說的">約九成來自美國及盟友，面板在另一個國家（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=420s" target="_blank" rel="noopener noreferrer">07:00</a>）</td><td data-label="現況">TechCrunch 引述同一說法（當事方自揭），並指明面板在中國製造（單方說法）；影片沒有說明 90% 的計算方式，無法換算還差多少</td></tr><tr><td data-label="Luckey 說的">有 100% 的技術藍圖（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=436s" target="_blank" rel="noopener noreferrer">07:16</a>）</td><td data-label="現況">沒有日期，也沒有廠商，只有他自己說（當事方自揭）</td></tr><tr><td data-label="Luckey 說的">無人機和筆電只差鍵盤和螢幕（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=328s" target="_blank" rel="noopener noreferrer">05:28</a>）</td><td data-label="現況">這個類比說明 Anduril 有把電子零件整合成強固系統的能力，但沒回答消費級筆電的兩個難題：量大時的成本，以及面板這類單一零件的供應（本文歸納）</td></tr></tbody></table></div>
+</div></section>
+<section class="slide layout-stat" id="slide-21" data-title="37,000 美元的估算，找不到出處" aria-label="第 21 頁，共 30 頁：37,000 美元的估算，找不到出處"><div class="slide-inner">
+<h2 id="s21-h1">37,000 美元的估算，找不到出處</h2>
+<p><strong>37,000 對 3,500</strong></p>
+<ul><li>他說分析師估價是 37,000 與 100,000 美元（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=280s" target="_blank" rel="noopener noreferrer">04:40</a>）；這兩個數字找不到出處（未找到）。</li><li>常見的分析師估算是 Wedbush 的 Dan Ives 所說，美國製 iPhone 可能超過 3,500 美元（<a href="https://www.ctvnews.ca/world/trumps-tariffs/article/iphone-could-triple-in-price-to-us3500-if-theyre-made-in-the-us/" target="_blank" rel="noopener noreferrer">CNN 經 CTV News 轉載，2025-04-09</a>）。</li><li>若字幕沒有聽錯，差了一個數量級；可能是字幕或口誤，也可能他指的是另一份分析，無法判斷。</li></ul>
+</div></section>
+<section class="slide layout-figure" id="slide-22" data-title="制裁：有文件的是 Luckey 本人，2025 年名單的轉載沒有 Anduril 公司" aria-label="第 22 頁，共 30 頁：制裁：有文件的是 Luckey 本人，2025 年名單的轉載沒有 Anduril 公司"><div class="slide-inner">
+<h2 id="s22-h1">制裁：有文件的是 Luckey 本人，2025 年名單的轉載沒有 Anduril 公司</h2>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-sanction-mobile.svg"><img src="images/fig-sanction.svg" alt="2025-12-26 中國反制名單示意：20 家企業名單的轉載內容沒有列出 Anduril 公司；10 名高階主管名單的第一位是 Palmer Luckey。" width="1200" height="424" loading="lazy" style="--ar-d:1200/424;--ar-m:600/880" tabindex="0" role="button" aria-label="放大圖片：2025-12-26 中國反制名單示意：20 家企業名單的轉載內容沒有列出 Anduril 公司；10 名高階主管名單的第一位是 Palmer Luckey。"></picture><figcaption>2025-12-26 中國反制名單示意：20 家企業名單的轉載內容沒有列出 Anduril 公司；10 名高階主管名單的第一位是 Palmer Luckey。</figcaption></figure>
+<ul><li>公告轉載（<a href="https://news.ifeng.com/c/8pOyUHMrSC9" target="_blank" rel="noopener noreferrer">鳳凰網</a>）：10 名高階主管第一位是 Luckey（已確認）；20 家企業沒有列出 Anduril。另有報導稱 2024 年底曾制裁 Anduril，未能核實；「Anduril 同樣被制裁」沒有一手公告佐證（有爭議）。</li><li><a href="https://fortune.com/2025/12/26/anduril-founder-palmer-luckey-us-defense-companies-china-sanctions-taiwan-arms-sales" target="_blank" rel="noopener noreferrer">Fortune／AP</a> 標題同樣是創辦人被點名；「分裂主義者」「恐怖分子」不是公告用語，是他的轉述。</li></ul>
+</div></section>
+<section class="slide layout-content" id="slide-23" data-title="Meridian：共同主持與 120 天可查，其餘多是他的說法" aria-label="第 23 頁，共 30 頁：Meridian：共同主持與 120 天可查，其餘多是他的說法"><div class="slide-inner">
+<h2 id="s23-h1">Meridian：共同主持與 120 天可查，其餘多是他的說法</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">Luckey 說的</th><th scope="col">現況</th></tr></thead><tbody><tr><td data-label="Luckey 說的">三位共同主席、120 天（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=559s" target="_blank" rel="noopener noreferrer">09:19</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=566s" target="_blank" rel="noopener noreferrer">09:26</a>）</td><td data-label="現況">Hegseth 2026-09-30 宣布，Musk、Luckey、Gingrich 共同主持，期程 120 天（<a href="https://asiatimes.com/2026/10/hegseth-taps-three-to-lead-future-of-warfare-project/" target="_blank" rel="noopener noreferrer">Asia Times</a>）（已確認）；「指導委員會」是他的用語</td></tr><tr><td data-label="Luckey 說的">MITRE 運作（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=570s" target="_blank" rel="noopener noreferrer">09:30</a>）</td><td data-label="現況"><a href="https://www.defensedaily.com/tech-execs-former-defense-officials-picked-for-pentagons-project-meridian-future-warfare-panel/pentagon/" target="_blank" rel="noopener noreferrer">Defense Daily</a> 報導國防部選了 MITRE；也有說法稱備忘錄只寫「合作單位」，未能核實（有爭議）</td></tr><tr><td data-label="Luckey 說的">約 20 人、Axon 創辦人 Rick Smith 參與（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=556s" target="_blank" rel="noopener noreferrer">09:16</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=582s" target="_blank" rel="noopener noreferrer">09:42</a>）</td><td data-label="現況">沒有找到對應說法（當事方自揭）</td></tr><tr><td data-label="Luckey 說的">2040、2050 年的戰爭樣貌（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=665s" target="_blank" rel="noopener noreferrer">11:05</a>）</td><td data-label="現況">官方只說研究未來戰爭；2040、2050 是他的說法（當事方自揭）</td></tr><tr><td data-label="Luckey 說的">報告 1 月提交（主持人問，<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=636s" target="_blank" rel="noopener noreferrer">10:36</a>）</td><td data-label="現況">據 <a href="https://www.stripes.com/theaters/us/2026-10-01/elon-musk-project-meridian-23025679.html" target="_blank" rel="noopener noreferrer">Stars and Stripes</a> 報導，截止日為 2027-01-28，未經官方原文核對（單方說法）</td></tr></tbody></table></div>
+</div></section>
+<section class="slide layout-content" id="slide-24" data-title="工廠、客群、日本：他說的，與現況" aria-label="第 24 頁，共 30 頁：工廠、客群、日本：他說的，與現況"><div class="slide-inner">
+<h2 id="s24-h1">工廠、客群、日本：他說的，與現況</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">Luckey 說的</th><th scope="col">現況</th></tr></thead><tbody><tr><td data-label="Luckey 說的">BlueChip 在 Arsenal 1 生產（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=873s" target="_blank" rel="noopener noreferrer">14:33</a>）</td><td data-label="現況">JobsOhio（2026-07-27）：俄亥俄州 Pickaway County；完整建成後規劃 500 萬平方英尺，Anduril 承諾資本投資 9.105 億美元，2035 年前創造 4,008 個職位；首架俄亥俄製 Fury 下線（<a href="https://www.jobsohio.com/newsroom/news-press/first-ohio-built-fury-rolls-off-andurils-arsenal-1-production-line" target="_blank" rel="noopener noreferrer">JobsOhio</a>）（已確認）。電路板組裝在 Arsenal 1 進行，是主持人開場與他的說法（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=11s" target="_blank" rel="noopener noreferrer">00:11</a>、<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=873s" target="_blank" rel="noopener noreferrer">14:33</a>），不在這份新聞稿裡</td></tr><tr><td data-label="Luckey 說的">先賣政府與關鍵產業，其他所有人的需求就綽綽有餘（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=120s" target="_blank" rel="noopener noreferrer">02:00</a>）</td><td data-label="現況">TechCrunch：首款客群是軍方、政府、第一線救援與執法，預購在 2027 年開放，並引述他另一場的說法：比一般高階 PC 貴約 20%（單方說法）。目前客群只有政府與關鍵產業，更大的市場還停在口頭（本文歸納）</td></tr><tr><td data-label="Luckey 說的">日本在談修憲，好在境內接納核武（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=800s" target="_blank" rel="noopener noreferrer">13:20</a>）</td><td data-label="現況">Jiji 2026-08-07：首相高市未明確排除檢討非核三原則，外界解讀為指「不允許帶進」一項（<a href="https://english.adnkronos.com/2026/08/07/takaichi-refrains-from-denying-revision-of-nonnuclear-principles/" target="_blank" rel="noopener noreferrer">Jiji／Adnkronos</a>）。非核三原則是政策原則，不是憲法條文，「修憲」在報導裡沒有對應內容（有落差）</td></tr></tbody></table></div>
+</div></section>
+<section class="slide layout-section" id="slide-25" data-title="第三幕：限制與接下來" aria-label="第 25 頁，共 30 頁：第三幕：限制與接下來"><div class="slide-inner">
+<h2 id="s25-h1">第三幕：限制與接下來</h2>
+<p>接下來：限制、時間軸、五件事。</p>
+</div></section>
+<section class="slide layout-content" id="slide-26" data-title="讀這場訪談要記得的限制" aria-label="第 26 頁，共 30 頁：讀這場訪談要記得的限制"><div class="slide-inner">
+<h2 id="s26-h1">讀這場訪談要記得的限制</h2>
+<ul><li>單一視角：受訪者是公司創辦人，BlueChip 是他自己的商業計畫；沒有高通的人，也沒有其他來源的聲音。</li><li>公開資料少：規格與價格尚未公布，第三方報導主要是 TechCrunch。</li><li>說話者歸屬：字幕沒有說話者標記，依上下文區分主持人與 Luckey，不明確的片段不歸給任何一方。</li><li>字幕與翻譯：字幕由機器產生，數字與人名可能聽錯（例如 37,000 美元）；中文翻譯同樣是機器完成。</li><li>措辭：他說工廠關閉是「菁英把我們出賣」（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=239s" target="_blank" rel="noopener noreferrer">03:59</a>），帶有明顯政治立場；本文只轉述。</li><li>面板廠商：他說還不能講（<a href="https://www.youtube.com/watch?v=a2wv9giz3vU&amp;t=442s" target="_blank" rel="noopener noreferrer">07:22</a>），影片沒有再追問。</li></ul>
+</div></section>
+<section class="slide layout-figure" id="slide-27" data-title="時間軸：該驗證的事，多半落在 2027 年" aria-label="第 27 頁，共 30 頁：時間軸：該驗證的事，多半落在 2027 年"><div class="slide-inner">
+<h2 id="s27-h1">時間軸：該驗證的事，多半落在 2027 年</h2>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-timeline-mobile.svg"><img src="images/fig-timeline.svg" alt="時間軸：2025-12-26 中國公布制裁名單；2026-07-27 首架俄亥俄製 Fury 下線；2026-09-30 國防部宣布 Meridian；2026-10-27 BlueChip 發表與本場訪談；2026-11-03 期中選舉；2027-01-28 Meridian 報告截止（報導）；2027 年 BlueChip 預購與量產（計畫）。" width="1200" height="520" loading="lazy" style="--ar-d:1200/520;--ar-m:600/812" tabindex="0" role="button" aria-label="放大圖片：時間軸：2025-12-26 中國公布制裁名單；2026-07-27 首架俄亥俄製 Fury 下線；2026-09-30 國防部宣布 Meridian；2026-10-27 BlueChip 發表與本場訪談；2026-11-03 期中選舉；2027-01-28 Meridian 報告截止（報導）；2027 年 BlueChip 預購與量產（計畫）。"></picture><figcaption>圖：本文整理自各頁來源；桌面版依時間比例，手機版等距；2027 年的項目是計畫說法或報導，日期未經官方原文核對。</figcaption></figure>
+</div></section>
+<section class="slide layout-content" id="slide-28" data-title="接下來該盯的五件事" aria-label="第 28 頁，共 30 頁：接下來該盯的五件事"><div class="slide-inner">
+<h2 id="s28-h1">接下來該盯的五件事</h2>
+<ol class="takeaways"><li>面板供應商：他說 2027 年公布更多，希望 CES 有進展。</li><li>價格與交貨日期：目前都沒有。</li><li>首批出貨的美製比例。</li><li>Meridian 報告：報導稱截止日為 2027-01-28。</li><li>高通是否另有官方說明。</li></ol>
+<p>本文歸納：這場訪談屬於計畫宣布。在那之前，BlueChip 的價值判斷要停在「合理的論點，尚未被證明」。</p>
+</div></section>
+<section class="slide layout-colophon" id="slide-29" data-title="製作說明：這篇導讀由 AI 模型完成" aria-label="第 29 頁，共 30 頁：製作說明：這篇導讀由 AI 模型完成"><div class="slide-inner">
+<h2 id="s29-h1">製作說明：這篇導讀由 AI 模型完成</h2>
+<ul><li>分析、撰稿、翻譯與查證皆由 AI 模型完成：主控為 Claude Sonnet 5.5；批次翻譯為 Gemini（經 agy 執行），修詞為 Claude；背景查證由 Claude 子代理加主控直接讀頁。沒有人類校稿。</li><li>本簡報由<a href="article.html">長文版導讀</a>濃縮而成；長文版經未參與撰稿的 Claude Opus 子代理獨立審稿，再由 Opus 依總編輯準則潤稿。簡報另經 Opus 子代理獨立審稿（內容與視覺各一）並複查；版面由三位 Opus 子代理實作，經 Opus 與 Codex 看圖審查。最後依使用者指示重排結構（講者主張為先、現況對照集中）並潤稿，由 Claude Sonnet 5.5 主控完成，再經一位 Opus 子代理審查、依意見修正，修正後未再複查。</li><li>依據是 YouTube 自動字幕，並以機器翻譯成繁體中文，未對照原音，字幕可能聽錯人名與數字；說話者歸屬依上下文判斷。</li><li>查證原則：重要說法須有一手來源或主流媒體，只有單方者降級標示。</li><li>資料圖為本文以程式繪製的 SVG；封面的筆電分解圖是由 Codex（imagegen）生成的示意插圖，僅作裝飾，不是 BlueChip 實機，也不代表各零件的產地。</li><li>另有<a href="translation-zh.html">全文譯本</a>與<a href="player.html">雙語字幕播放器</a>。</li></ul>
+</div></section>
+<section class="slide layout-sources" id="slide-30" data-title="來源清單" aria-label="第 30 頁，共 30 頁：來源清單"><div class="slide-inner">
+<h2 id="s30-h1">來源清單</h2>
+<ul class="sources"><li><a href="https://www.youtube.com/watch?v=a2wv9giz3vU" target="_blank" rel="noopener noreferrer">Bloomberg Tech：Anduril&#x27;s Luckey Partners With Qualcomm to Build American-Made Laptop（影片）</a>，2026-10-27</li><li><a href="https://techcrunch.com/2026/10/27/anduril-qualcomm-launch-bluechip-a-new-kind-of-us-made-laptop/" target="_blank" rel="noopener noreferrer">TechCrunch：Anduril, Qualcomm launch BlueChip, a new kind of US-made laptop</a>，2026-10-27</li><li><a href="https://www.nist.gov/news-events/news/2024/12/biden-harris-administration-announces-chips-incentives-award-amkor" target="_blank" rel="noopener noreferrer">NIST：Biden-Harris Administration Announces CHIPS Incentives Award with Amkor</a>，2024-12-20</li><li><a href="https://www.ctvnews.ca/world/trumps-tariffs/article/iphone-could-triple-in-price-to-us3500-if-theyre-made-in-the-us/" target="_blank" rel="noopener noreferrer">CTV News（轉載 CNN Business）：iPhone could triple in price to $3,500 if they&#x27;re made in the US</a>，2025-04-09</li><li><a href="https://fortune.com/2025/12/26/anduril-founder-palmer-luckey-us-defense-companies-china-sanctions-taiwan-arms-sales" target="_blank" rel="noopener noreferrer">Fortune／AP：Anduril founder Palmer Luckey among sanctioned by China</a>，2025-12-26</li><li><a href="https://news.ifeng.com/c/8pOyUHMrSC9" target="_blank" rel="noopener noreferrer">鳳凰網（轉載中國外交部公告）：對美國防企業與高管採取反制措施</a>，2025-12-26</li><li><a href="https://www.jobsohio.com/newsroom/news-press/first-ohio-built-fury-rolls-off-andurils-arsenal-1-production-line" target="_blank" rel="noopener noreferrer">JobsOhio：First Ohio-Built Fury Rolls Off Arsenal-1</a>，2026-07-27</li><li><a href="https://asiatimes.com/2026/10/hegseth-taps-three-to-lead-future-of-warfare-project/" target="_blank" rel="noopener noreferrer">Asia Times：Hegseth taps three to lead Future of Warfare project</a>，2026-10-02</li><li><a href="https://www.stripes.com/theaters/us/2026-10-01/elon-musk-project-meridian-23025679.html" target="_blank" rel="noopener noreferrer">Stars and Stripes：Elon Musk, Project Meridian</a>，2026-10-01</li><li><a href="https://www.defensedaily.com/tech-execs-former-defense-officials-picked-for-pentagons-project-meridian-future-warfare-panel/pentagon/" target="_blank" rel="noopener noreferrer">Defense Daily：Project Meridian panel</a>，2026-10-06</li><li><a href="https://english.adnkronos.com/2026/08/07/takaichi-refrains-from-denying-revision-of-nonnuclear-principles/" target="_blank" rel="noopener noreferrer">Jiji／Adnkronos：Takaichi refrains from denying revision of nonnuclear principles</a>，2026-08-07</li></ul>
+</div></section>
+</div>
+</main>
+<div class="controls" role="group" aria-label="翻頁控制"><button type="button" id="prev" aria-label="上一頁">←</button><span class="counter" id="counter" aria-live="polite">1 / 30</span><button type="button" id="next" aria-label="下一頁">→</button></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+<script>
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide')),n=slides.length,cur=0;
+  var counter=document.getElementById('counter'),bar=document.querySelector('.progress i');
+  var prev=document.getElementById('prev'),next=document.getElementById('next');
+  function fromHash(){var m=location.hash.match(/^#(?:slide-)?(\d+)$/);return m?Math.min(Math.max(+m[1]-1,0),n-1):0;}
+  function show(i){
+    i=Math.min(Math.max(i,0),n-1);cur=i;
+    slides.forEach(function(s,k){s.classList.toggle('is-current',k===i);});
+    slides[i].scrollTop=0;
+    counter.textContent=(i+1)+' / '+n;
+    bar.style.width=(n>1?i/(n-1)*100:100)+'%';
+    prev.disabled=i===0;next.disabled=i===n-1;
+    try{history.replaceState(null,'','#'+(i+1));}catch(e){}
+  }
+  prev.addEventListener('click',function(){show(cur-1);});
+  next.addEventListener('click',function(){show(cur+1);});
+  function inScroller(t){return t&&t.closest&&t.closest('.table-scroll,.mermaid-scroll');}
+  function interactive(t){return t&&t.closest&&t.closest('button,a,img,[role=button],input,select,textarea');}
+  document.addEventListener('keydown',function(e){
+    if(document.getElementById('lightbox').classList.contains('is-open'))return;
+    if(e.altKey||e.ctrlKey||e.metaKey)return;
+    var k=e.key,t=e.target;
+    if(k==='ArrowRight'||k==='PageDown'){if(inScroller(t)&&k==='ArrowRight')return;e.preventDefault();show(cur+1);}
+    else if(k==='ArrowLeft'||k==='PageUp'){if(inScroller(t)&&k==='ArrowLeft')return;e.preventDefault();show(cur-1);}
+    else if(k===' '){if(interactive(t))return;e.preventDefault();show(e.shiftKey?cur-1:cur+1);}
+    else if(k==='Home'){e.preventDefault();show(0);}
+    else if(k==='End'){e.preventDefault();show(n-1);}
+  });
+  var sx=null,sy=null;
+  document.addEventListener('touchstart',function(e){
+    if(inScroller(e.target)){sx=null;return;}
+    sx=e.touches[0].clientX;sy=e.touches[0].clientY;
+  },{passive:true});
+  document.addEventListener('touchend',function(e){
+    if(sx===null)return;
+    var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=null;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){show(dx<0?cur+1:cur-1);}
+  },{passive:true});
+  window.addEventListener('hashchange',function(){show(fromHash());});
+  show(fromHash());
+})();
+
+/* ===== 簡報客製動態（deep-guide-slides extra_js_file）===== */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  /* 章節：由「章節分隔頁」（layout-section）切出；分隔頁之前為序，製作說明與來源為附錄 */
+  var act=0,actName='開場說明',actNo='序',NACT=slides.filter(function(x){return x.classList.contains('layout-section');}).length,dvs=[];
+  slides.forEach(function(s,i){
+    var inner=s.querySelector('.slide-inner');if(!inner||i===0)return;
+    if(s.classList.contains('layout-section')){
+      act++;var h=inner.querySelector('h2');actName=h?h.textContent.replace(/^第.幕：/,''):'';actNo=(act<10?'0':'')+act;dvs.push([s,act,actNo]);return;
+    }
+    if(s.classList.contains('layout-statement'))return;
+    if(s.classList.contains('layout-colophon')||s.classList.contains('layout-sources')){actName='製作與來源';actNo='附錄';}
+    var d=document.createElement('div');d.className='kicker';d.setAttribute('aria-hidden','true');
+    d.innerHTML='<span class="no">'+actNo+'</span><span>'+actName+'</span>';
+    inner.insertBefore(d,inner.firstChild);
+  });
+  /* 分隔頁：大號碼＋依進度填滿的環（呼應封面的 90% 環） */
+  dvs.forEach(function(v){
+    var s=v[0],n=v[1],pins='',i;for(i=0;i<9;i++){var p=34+i*16;pins+='<line class="pin" x1="'+p+'" y1="14" x2="'+p+'" y2="34"/><line class="pin" x1="'+p+'" y1="206" x2="'+p+'" y2="226"/><line class="pin" x1="14" y1="'+p+'" x2="34" y2="'+p+'"/><line class="pin" x1="206" y1="'+p+'" x2="226" y2="'+p+'"/>';}
+    var c=document.createElement('div');c.className='chip dchip';c.setAttribute('aria-hidden','true');
+    c.innerHTML='<svg viewBox="0 0 240 240" focusable="false">'+pins+'<rect class="die" x="34" y="34" width="172" height="172" rx="22"/><circle class="track" cx="120" cy="120" r="54" pathLength="100"/><circle class="ring" cx="120" cy="120" r="54" pathLength="100" style="stroke-dasharray:'+(n/NACT*100)+' 100;stroke-dashoffset:0"/><text x="120" y="138" text-anchor="middle" class="dno">'+v[2]+'</text></svg>';
+    s.insertBefore(c,s.firstChild);
+    var inner=s.querySelector('.slide-inner'),k=document.createElement('div');k.className='dkick';k.setAttribute('aria-hidden','true');k.textContent=n+' / '+NACT;inner.insertBefore(k,inner.firstChild);
+  });
+  (function(){var c=slides[0]&&slides[0].querySelector('.slide-inner');if(!c)return;[].slice.call(c.querySelectorAll('p')).forEach(function(p){if(/^影片：/.test(p.textContent))p.classList.add('vid');});})();
+  if(slides[0]){var h=document.createElement('div');h.className='hint';h.setAttribute('aria-hidden','true');h.textContent='← → 翻頁　　Home／End 頭尾';slides[0].appendChild(h);}
+  /* 封面主視覺：AI 生成的示意插圖（裝飾；說明見製作說明頁） */
+  if(slides[0]){var ca=document.createElement('img');ca.className='cover-art';ca.src='images/hero-cover.jpg';ca.alt='示意插圖（AI 生成），非 BlueChip 實機，不代表零件產地';ca.decoding='async';
+    var inn0=slides[0].querySelector('.slide-inner');if(window.matchMedia&&matchMedia('(max-width:640px)').matches&&inn0)inn0.insertBefore(ca,inn0.firstChild);else slides[0].insertBefore(ca,slides[0].firstChild);
+    var cc=document.createElement('div');cc.className='cover-cap';cc.textContent='示意插圖（AI 生成），非 BlueChip 實機，不代表零件產地';if(ca.parentNode===inn0)inn0.insertBefore(cc,ca.nextSibling);else slides[0].appendChild(cc);}
+  /* 封面：晶片＋ 90% 環形（純裝飾） */
+  if(slides[0]){
+    var pins='',i;for(i=0;i<9;i++){var p=34+i*16;pins+='<line class="pin" x1="'+p+'" y1="14" x2="'+p+'" y2="34"/><line class="pin" x1="'+p+'" y1="206" x2="'+p+'" y2="226"/><line class="pin" x1="14" y1="'+p+'" x2="34" y2="'+p+'"/><line class="pin" x1="206" y1="'+p+'" x2="226" y2="'+p+'"/>';}
+    var c=document.createElement('div');c.className='chip';c.setAttribute('aria-hidden','true');
+    c.innerHTML='<svg viewBox="0 0 240 240" focusable="false">'+pins+'<rect class="die" x="34" y="34" width="172" height="172" rx="22"/><circle class="track" cx="120" cy="120" r="54" pathLength="100"/><circle class="ring" cx="120" cy="120" r="54" pathLength="100"/><circle class="gap" cx="120" cy="120" r="54" pathLength="100" stroke-dasharray="8 92" stroke-dashoffset="-91" transform="rotate(-90 120 120)"/></svg>';
+    slides[0].insertBefore(c,slides[0].firstChild);
+  }
+  /* 標示徽章：把「（已確認）」這類標示轉成徽章，文字保留 */
+  var MAP={'已確認':'conf','當事方自揭':'self','單方說法':'single','有爭議':'dispute','部分確認':'partial','部分成立':'partial','未找到':'nf','有落差':'gap','本文歸納':'note'};
+  var RE=/（(已確認|當事方自揭|單方說法|有爭議|部分確認|部分成立|未找到|有落差|本文歸納)）|(本文歸納)(?=：)/g;
+  function walk(node){
+    if(node.nodeType===3){
+      var t=node.nodeValue;RE.lastIndex=0;if(!RE.test(t))return;RE.lastIndex=0;
+      var frag=document.createDocumentFragment(),last=0,m;
+      while((m=RE.exec(t))){
+        if(m.index>last)frag.appendChild(document.createTextNode(t.slice(last,m.index)));
+        var lab=m[1]||m[2],sp=document.createElement('span');sp.className='tag t-'+MAP[lab];sp.textContent=lab;frag.appendChild(sp);
+        last=RE.lastIndex;
+      }
+      if(last<t.length)frag.appendChild(document.createTextNode(t.slice(last)));
+      node.parentNode.replaceChild(frag,node);return;
+    }
+    if(node.nodeType===1&&!/^(SCRIPT|STYLE|A|SVG|IMG|BUTTON)$/i.test(node.tagName)&&!(node.className&&/\btag\b/.test(node.className))){
+      [].slice.call(node.childNodes).forEach(walk);
+    }
+  }
+  slides.forEach(function(s){walk(s.querySelector('.slide-inner'));});
+  /* 徽章與前一字、後面的標點綁在一起，避免孤行 */
+  [].slice.call(document.querySelectorAll('.slide .tag')).forEach(function(t){
+    if(t.closest('td,.ch,.legend,ul.cardgrid'))return;
+    var pv=t.previousSibling,nx=t.nextSibling,w=document.createElement('span');w.className='nb';
+    if(pv&&pv.nodeType===3&&pv.nodeValue.length){var c=pv.nodeValue.slice(-1);pv.nodeValue=pv.nodeValue.slice(0,-1);w.appendChild(document.createTextNode(c));}
+    t.parentNode.insertBefore(w,t);w.appendChild(t);
+    if(nx&&nx.nodeType===3&&/^[。，；、）]/.test(nx.nodeValue)){w.appendChild(document.createTextNode(nx.nodeValue.charAt(0)));nx.nodeValue=nx.nodeValue.slice(1);}
+  });
+  /* 重點引言：前綴「重點：」改成小標 */
+  [].slice.call(document.querySelectorAll('aside.note')).forEach(function(a){
+    var p=a.querySelector('p')||a,f=p.firstChild;
+    if(f&&f.nodeType===3&&/^重點：/.test(f.nodeValue)){
+      f.nodeValue=f.nodeValue.replace(/^重點：/,'');
+      var k=document.createElement('span');k.className='note-k';k.textContent='重點';p.insertBefore(k,p.firstChild);
+    }
+  });
+  /* 大數字：依字數調整字級 */
+  [].slice.call(document.querySelectorAll('.layout-stat .slide-inner>p:first-of-type strong')).forEach(function(el){
+    var L=el.textContent.length,sc=L<=4?6.2:(L<=7?3.6:2.6);el.style.setProperty('--stat',sc);el.style.setProperty('--stat-m',Math.min(sc,L<=7?3.2:2.3));
+  });
+  [].slice.call(document.querySelectorAll('.slide ul')).forEach(function(u){if(u.querySelectorAll('li').length>=6&&u.querySelector('.tag'))u.classList.add('legend');});
+  /* 標題：標點後允許斷行；數字與後面的中文字不拆 */
+  [].slice.call(document.querySelectorAll('.slide h2')).forEach(function(h){
+    (function w(n){
+      if(n.nodeType===3){var t=n.nodeValue.replace(/(\d) (?=[\u4e00-\u9fff])/g,'$1\u00a0');
+        if(/[，；：、]/.test(t)){var f=document.createDocumentFragment();t.split(/([，；：、])/).forEach(function(p){f.appendChild(document.createTextNode(p));if(/^[，；：、]$/.test(p))f.appendChild(document.createElement('wbr'));});n.parentNode.replaceChild(f,n);}
+        else n.nodeValue=t;}
+      else if(n.nodeType===1&&n.tagName!=='A')[].slice.call(n.childNodes).forEach(w);
+    })(h);
+  });
+  /* 日期（2026-10-27）不拆行 */
+  (function(){
+    var tw=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{acceptNode:function(n){var p=n.parentNode;return(p&&!/^(SCRIPT|STYLE|H2)$/i.test(p.tagName)&&p.closest&&p.closest('.slide-inner')&&/\d{4}-\d{2}-\d{2}/.test(n.nodeValue))?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+    var list=[],n;while((n=tw.nextNode()))list.push(n);
+    list.forEach(function(n){var f=document.createDocumentFragment(),last=0,m,re=/\d{4}-\d{2}-\d{2}/g,t=n.nodeValue;
+      while((m=re.exec(t))){if(m.index>last)f.appendChild(document.createTextNode(t.slice(last,m.index)));var s=document.createElement('span');s.className='nb';s.textContent=m[0];f.appendChild(s);last=re.lastIndex;}
+      if(last<t.length)f.appendChild(document.createTextNode(t.slice(last)));n.parentNode.replaceChild(f,n);});
+  })();
+  /* 與 alt 完全相同的圖說會重複朗讀與佔版面：移除（alt 仍保留） */
+  [].slice.call(document.querySelectorAll('figure')).forEach(function(f){
+    var im=f.querySelector('img'),cap=f.querySelector('figcaption');
+    if(im&&cap&&cap.textContent.trim()===(im.getAttribute('alt')||'').trim())cap.parentNode.removeChild(cap);
+  });
+  /* 時間戳連結與前後括號、頓號綁在一起，避免單獨掉到行首 */
+  [].slice.call(document.querySelectorAll('.slide a')).forEach(function(a){
+    if(!/^\d{1,2}:\d{2}$/.test(a.textContent.trim()))return;
+    var pv=a.previousSibling,nx=a.nextSibling,wrap=document.createElement('span');wrap.className='nb';
+    if(pv&&pv.nodeType===3&&/[（、]$/.test(pv.nodeValue)){var ch=pv.nodeValue.slice(-1);pv.nodeValue=pv.nodeValue.slice(0,-1);wrap.appendChild(document.createTextNode(ch));}
+    a.parentNode.insertBefore(wrap,a);wrap.appendChild(a);
+    if(nx&&nx.nodeType===3&&/^[）、。，]/.test(nx.nodeValue)){wrap.appendChild(document.createTextNode(nx.nodeValue.charAt(0)));nx.nodeValue=nx.nodeValue.slice(1);}
+  });
+  /* 封面副標的日期不拆行 */
+  var lede=document.querySelector('.layout-cover .lede');
+  if(lede)lede.innerHTML=lede.innerHTML.replace(/（?\d{4}-\d{2}-\d{2}）?/g,function(m){return '<span class="nb">'+m+'</span>';});
+  /* 結論表的類別欄：套用對應徽章 */
+  var CAT={'有文件支撐':'conf','只有他自己說':'self','有爭議':'dispute','有落差':'gap'};
+  [].slice.call(document.querySelectorAll('.table-scroll td:first-child')).forEach(function(td){
+    var k=td.textContent.trim();if(CAT[k]&&td.children.length===0){td.innerHTML='<span class="tag t-'+CAT[k]+'">'+k+'</span>';}
+  });
+  /* 「限制」頁：條列改成卡片（標題＝冒號前的詞） */
+  slides.forEach(function(s){
+    var t=s.getAttribute('data-title')||'';
+    if(/^讀這場訪談要記得的限制/.test(t)){
+      var u=s.querySelector('ul');if(!u)return;u.classList.add('cards');
+      [].slice.call(u.children).forEach(function(li){var f=li.firstChild;
+        if(f&&f.nodeType===3){var m=f.nodeValue.match(/^([^：]{1,8})：/);if(m){var b=document.createElement('b');b.className='ct';b.textContent=m[1];f.nodeValue=f.nodeValue.slice(m[0].length);li.insertBefore(b,f);}}});
+    }
+    if(/^結論：/.test(t)){
+      var tw=s.querySelector('.table-scroll');if(!tw)return;
+      var g=document.createElement('ul');g.className='cardgrid';
+      [].slice.call(tw.querySelectorAll('tbody tr')).forEach(function(r){var td=r.children;if(td.length<2)return;
+        var li=document.createElement('li');li.innerHTML='<div class="ch">'+td[0].innerHTML+'</div><div class="cb">'+td[1].innerHTML+'</div>';g.appendChild(li);});
+      tw.parentNode.insertBefore(g,tw);tw.setAttribute('hidden','');
+    }
+  });
+  /* 37,000 對 3,500：比例條（裝飾，數字已在文字中） */
+  var st=slides.filter(function(s){return /37,000/.test(s.textContent)&&s.classList.contains('layout-stat');})[0];
+  if(st){
+    var pp=st.querySelector('.slide-inner>p:first-of-type');
+    if(pp){var r=document.createElement('div');r.className='ratio';r.setAttribute('aria-hidden','true');
+      r.innerHTML='<div class="u"><span>37,000 美元（他說的；找不到出處）</span><i style="width:100%"></i></div><div class="s"><span>3,500 美元（常見估算）</span><i style="width:9.5%"></i></div>';pp.appendChild(r);}
+  }
+  /* 換頁時用朗讀區念出頁面標題；主內容可聚焦（skip link） */
+  var deck=document.getElementById('deck');if(deck)deck.setAttribute('tabindex','-1');
+  var live=document.createElement('div');live.className='sr';live.setAttribute('aria-live','polite');document.body.appendChild(live);
+  var cnt=document.getElementById('counter');if(cnt)cnt.setAttribute('aria-live','off');
+  var mo2=new MutationObserver(function(ms){ms.forEach(function(m){var t=m.target;if(!t.classList.contains('is-current'))return;
+    live.textContent=(slides.indexOf(t)+1)+' / '+slides.length+'：'+(t.getAttribute('data-title')||'');
+    var a=document.activeElement;if(!a||a===document.body||(a.closest&&a.closest('.slide')&&!a.closest('.is-current'))){try{t.focus({preventScroll:true});}catch(e){}}
+  });});
+  slides.forEach(function(s){s.setAttribute('aria-roledescription','投影片');s.setAttribute('tabindex','-1');mo2.observe(s,{attributes:true,attributeFilter:['class']});});
+})();
+/* ===== 片段 A（子代理交付，已合併）===== */
+(function(){try{
+/* ===== frag_A：純條列頁改成左右對照（.cmp-）===== */
+/* 只搬動既有 <li>，不增刪改字；欄位小標取自頁面既有字詞，aria-hidden（內容本身已含同樣的字） */
+(function(){
+  var PLAN=[
+    /* [data-title 開頭, 版型修飾, [[小標, 色系, 第幾個 li（0 起）]...], 跨欄底列的 li] */
+    [/^先賣政府與關鍵產業/,'',[['Luckey','say',[0,1]],['TechCrunch 與他另一場的說法','doc',[2]]],[3]],
+    [/^他說公司也被制裁/,'cmp-wide-r',[['Luckey','say',[0]],['公告轉載、報導與本文判斷','doc',[1]]],[]],
+  ];
+  [].slice.call(document.querySelectorAll('.slide')).forEach(function(s){
+    var t=s.getAttribute('data-title')||'',p=null;
+    PLAN.forEach(function(x){if(x[0].test(t))p=x;});
+    if(!p)return;
+    var inner=s.querySelector('.slide-inner'),u=inner&&inner.querySelector(':scope>ul');if(!u)return;
+    var li=[].slice.call(u.children),need=0;
+    p[2].forEach(function(c){need+=c[2].length;});need+=p[3].length;
+    if(li.length!==need)return; /* 內容結構與預期不符就保留原樣 */
+    var g=document.createElement('div');g.className='cmp'+(p[1]?' '+p[1]:'');
+    p[2].forEach(function(c){
+      var col=document.createElement('div');col.className='cmp-col cmp-'+c[1];
+      var k=document.createElement('div');k.className='cmp-k';k.setAttribute('aria-hidden','true');
+      k.textContent=c[0];
+      var ul=document.createElement('ul');
+      c[2].forEach(function(i){ul.appendChild(li[i]);});
+      col.appendChild(k);col.appendChild(ul);g.appendChild(col);
+    });
+    if(p[3].length){
+      var f=document.createElement('ul');f.className='cmp-foot';
+      p[3].forEach(function(i){f.appendChild(li[i]);});g.appendChild(f);
+    }
+    u.parentNode.replaceChild(g,u);
+    s.classList.add('has-cmp');
+  });
+})();
+
+}catch(e){}})();
+/* ===== 片段 C（子代理交付，已合併）===== */
+(function(){try{
+/* ===== frag_C：事實卡、大數字列、排版細修（只讀頁面既有文字，不新增事實）===== */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  function byTitle(re){return slides.filter(function(s){return re.test(s.getAttribute('data-title')||'');})[0];}
+  function txt(el){return (el&&el.textContent||'').replace(/\s+/g,' ');}
+  function mk(tag,cls,t){var e=document.createElement(tag);if(cls)e.className=cls;if(t!=null)e.textContent=t;return e;}
+
+  /* 第 12 頁：三格事實卡（技術藍圖／日期／廠商）。結論字詞取自標題與條列原文；
+     卡片是視覺摘要（aria-hidden，無連結），完整條列與時間戳連結原封保留在下方 */
+  (function(){
+    var s=byTitle(/^他說：100% 只有「技術藍圖」，沒有日期，廠商也還不能說/);if(!s)return;
+    var inner=s.querySelector('.slide-inner'),h=inner.querySelector('h2'),u=inner.querySelector('ul');if(!h||!u)return;
+    var title=txt(h),lis=[].slice.call(u.children).map(txt),all=lis.join(' ');
+    function find(re){var m=all.match(re);return m?m[0]:null;}
+    var cells=[
+      {k:'技術藍圖',v:/只有「技術藍圖」/.test(title)?'有':null,d:find(/他說有「明確達到 100% 美國本土製造的技術藍圖」/),c:'fact-yes'},
+      {k:'日期',v:/沒有日期/.test(title)?'沒有':null,d:find(/官方答案是 2027 年公布更多/),c:'fact-no'},
+      {k:'廠商',v:find(/還不能說/),d:find(/還不能說是哪家公司，因為還在協商/),c:'fact-no'}
+    ];
+    if(cells.some(function(c){return !c.v||!c.d;}))return; /* 原文對不上就不做，維持原條列 */
+    var row=mk('div','fact-row');row.setAttribute('aria-hidden','true');
+    cells.forEach(function(c,i){
+      var card=mk('div','fact-card '+c.c);card.style.setProperty('--fact-i',i);
+      card.appendChild(mk('span','fact-k',c.k));card.appendChild(mk('b','fact-v',c.v));card.appendChild(mk('span','fact-d',c.d));
+      row.appendChild(card);
+    });
+    inner.insertBefore(row,u);u.classList.add('fact-list');s.classList.add('fact-slide');
+  })();
+
+  /* 第 20 頁：JobsOhio 條列中的三個數字抽成一排大數字（裝飾，aria-hidden；原句保留） */
+  (function(){
+    var s=byTitle(/^Arsenal 1 的官方資料/);if(!s)return;
+    var inner=s.querySelector('.slide-inner'),u=inner.querySelector('ul');if(!u)return;
+    var li=[].slice.call(u.children).filter(function(l){return /JobsOhio/.test(l.textContent);})[0];if(!li)return;
+    var t=txt(li);
+    var defs=[
+      {re:/(完整建成後規劃) (500 萬)(平方英尺)/},
+      {re:/(Anduril 承諾資本投資) (9\.105 億)(美元)/},
+      {re:/(2035 年前創造) (4,008) ?(個職位)/}
+    ];
+    var got=defs.map(function(d){return t.match(d.re);});
+    if(got.some(function(m){return !m;}))return;
+    var src=t.match(/^JobsOhio（\d{4}-\d{2}-\d{2}）/);
+    var row=mk('div','num-row');row.setAttribute('aria-hidden','true');
+    got.forEach(function(m,i){
+      var c=mk('div','num-cell');c.style.setProperty('--num-i',i);
+      var n=mk('span','num-n');n.appendChild(mk('b','num-v',m[2]));n.appendChild(mk('span','num-u',m[3]));
+      c.appendChild(n);c.appendChild(mk('span','num-k',m[1]));row.appendChild(c);
+    });
+    if(src)row.appendChild(mk('span','num-src',src[0]));
+    inner.insertBefore(row,u);s.classList.add('num-slide');
+    var h=inner.querySelector('h2');if(h)[].slice.call(h.childNodes).forEach(function(n){if(n.nodeType===3)n.nodeValue=n.nodeValue.replace(/Arsenal 1/g,'Arsenal\u00a01');});
+  })();
+
+  /* 第 22 頁：標題「與 120 天」不拆（空白改不換行空白，字不變） */
+  (function(){
+    var s=byTitle(/^Meridian：共同主持與 120 天/);if(!s)return;var h=s.querySelector('h2');if(!h)return;
+    [].slice.call(h.childNodes).forEach(function(n){if(n.nodeType===3)n.nodeValue=n.nodeValue.replace(/與 (?=\d)/g,'與\u00a0');});
+  })();
+
+  /* 圖例：依項目數設定格線列數，讓兩欄逐列對齊 */
+  [].slice.call(document.querySelectorAll('.slide ul.legend')).forEach(function(u){
+    u.style.setProperty('--fact-rows',Math.ceil(u.children.length/2));u.classList.add('fact-legend');
+  });
+  /* 第 4 頁：「原影片」單獨一段的連結改成貼著圖例的來源列 */
+  (function(){
+    var s=byTitle(/^這場訪談是直播/);if(!s)return;
+    var p=[].slice.call(s.querySelectorAll('.slide-inner>p')).filter(function(p){var a=p.querySelector('a');return a&&p.children.length===1&&p.textContent.trim()==='原影片';})[0];
+    if(p)p.classList.add('fact-srcline');
+  })();
+})();
+
+}catch(e){}})();
+/* ===== 片段 B（子代理交付，已合併；須在其他腳本之後）===== */
+(function(){try{
+/* ===== frag_B：迷你晶片導覽、換頁轉場（View Transitions）、分隔頁標題 ===== */
+(function(){
+  var slides=[].slice.call(document.querySelectorAll('.slide'));
+  var stage=document.querySelector('.stage'),root=document.documentElement;
+  if(!slides.length||!stage)return;
+
+  /* 分隔頁標題：「第N幕：」固定獨佔第一行，五張分隔頁的標題起點與行結構一致（文字不變，只包 span） */
+  slides.forEach(function(s){
+    if(!s.classList.contains('layout-section'))return;
+    /* slides_extra.js 已在標點處把文字拆成多個文字節點（「第一幕」「：」<wbr>…），所以逐節點累積到「：」為止 */
+    var h=s.querySelector('h2'),nodes=[],acc='',c=h&&h.firstChild;
+    while(c&&c.nodeType===3&&acc.indexOf('：')<0){nodes.push(c);acc+=c.nodeValue;c=c.nextSibling;}
+    var m=acc.match(/^第.幕：/);if(!m)return;
+    var sp=document.createElement('span');sp.className='vt-secpre';sp.textContent=m[0];
+    h.insertBefore(sp,nodes[0]);nodes.forEach(function(x){h.removeChild(x);});
+    var rest=acc.slice(m[0].length);if(rest)h.insertBefore(document.createTextNode(rest),sp.nextSibling);
+  });
+
+  /* 幕次推算：與 slides_extra.js 相同規則（分隔頁切幕；製作說明與來源起為附錄） */
+  var NACT=0,act=0,appx=false,groups={},info=[];
+  slides.forEach(function(s){if(s.classList.contains('layout-section'))NACT++;});
+  slides.forEach(function(s,i){
+    var o={type:'content'};
+    if(i===0)o.type='cover';
+    else if(s.classList.contains('layout-section')){act++;o.type='section';}
+    else if(s.classList.contains('layout-colophon')||s.classList.contains('layout-sources'))appx=true;
+    o.act=act;o.appx=appx;o.key=appx?'x':String(act);
+    if(o.type==='content')(groups[o.key]=groups[o.key]||[]).push(o);
+    info.push(o);
+  });
+  Object.keys(groups).forEach(function(k){groups[k].forEach(function(o,j,g){o.k=j+1;o.m=g.length;});});
+
+  /* 迷你晶片（純裝飾）：環＝幕次進度，20 支針腳順時針隨幕內頁序亮起 */
+  var P=[19,25.5,32,38.5,45],R=P.slice().reverse(),pins='',n=0;
+  function pin(x1,y1,x2,y2){return '<line class="mini-pin" style="--i:'+(n++)+'" x1="'+x1+'" y1="'+y1+'" x2="'+x2+'" y2="'+y2+'"/>';}
+  P.forEach(function(p){pins+=pin(p,4,p,11);});
+  P.forEach(function(p){pins+=pin(53,p,60,p);});
+  R.forEach(function(p){pins+=pin(p,53,p,60);});
+  R.forEach(function(p){pins+=pin(4,p,11,p);});
+  var mini=document.createElement('div');mini.className='mini-chip';mini.setAttribute('aria-hidden','true');
+  mini.innerHTML='<svg viewBox="0 0 64 64" focusable="false">'+pins+
+    '<rect class="mini-die" x="12" y="12" width="40" height="40" rx="7"/>'+
+    '<circle class="mini-track" cx="32" cy="32" r="11" pathLength="100"/>'+
+    '<circle class="mini-ring" cx="32" cy="32" r="11" pathLength="100"/>'+
+    '<circle class="mini-core" cx="32" cy="32" r="2.4"/></svg>';
+  stage.appendChild(mini);
+  var ring=mini.querySelector('.mini-ring'),pinEls=[].slice.call(mini.querySelectorAll('.mini-pin'));
+
+  function paint(i){
+    var o=info[i],on=!!o&&o.type==='content';
+    mini.classList.toggle('is-on',on);
+    if(!on)return; /* 隱藏時保留上一個狀態，下次出現才由舊值過渡到新值 */
+    var pct=o.appx?100:(NACT?o.act/NACT*100:0);
+    ring.style.strokeDasharray=pct+' 100';
+    ring.style.opacity=pct?'1':'0';
+    mini.classList.toggle('is-appx',o.appx);
+    var lit=Math.round(o.k/o.m*pinEls.length);
+    pinEls.forEach(function(p,j){p.classList.toggle('is-lit',j<lit);});
+  }
+  function curIndex(){for(var i=0;i<slides.length;i++)if(slides[i].classList.contains('is-current'))return i;return -1;}
+
+  var cur=curIndex();
+  mini.classList.add('mini-init');paint(cur);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){mini.classList.remove('mini-init');});});
+
+  /* 換頁轉場：核心翻頁 JS 同步切換 is-current 後，在同一個 microtask 內（畫面尚未更新）
+     暫時讓舊頁保持可見、新頁透明（vt-freeze，只動 stage 的 class 與舊頁的 data 屬性，不碰 slide 的 class），
+     再呼叫 startViewTransition 擷取舊畫面，callback 內解除凍結＝新畫面。
+     不支援、使用者要求減少動態、或分頁在背景時，直接更新，無任何轉場。 */
+  var canVT=typeof document.startViewTransition==='function';
+  var mq=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):null;
+  var pending=null;
+  function unfreeze(){
+    stage.classList.remove('vt-freeze');
+    var o=stage.querySelector('[data-vt-old]');if(o)o.removeAttribute('data-vt-old');
+  }
+  function finishPending(p,i){if(pending!==p)return;pending=null;clearTimeout(p.t);unfreeze();paint(i);}
+  var mo=new MutationObserver(function(){
+    var now=curIndex();
+    if(now<0||now===cur)return;
+    var prev=cur;cur=now;
+    if(pending){ /* 上一個轉場還沒擷取完就又翻頁：取消它，直接到最新頁 */
+      var p0=pending;pending=null;clearTimeout(p0.t);
+      try{p0.vt&&p0.vt.skipTransition();}catch(e){}
+      unfreeze();paint(now);return;
+    }
+    if(!canVT||(mq&&mq.matches)||document.hidden||prev<0){paint(now);return;}
+    var p={};
+    try{
+      stage.classList.add('vt-freeze');slides[prev].setAttribute('data-vt-old','');
+      root.setAttribute('data-vt-dir',now<prev?'back':'fwd');
+      root.classList.add('vt-run');
+      pending=p;
+      p.vt=document.startViewTransition(function(){finishPending(p,now);});
+      p.t=setTimeout(function(){finishPending(p,now);},300); /* 保險：callback 沒被叫到也會解除凍結 */
+      var end=function(){if(!pending&&cur===now){root.classList.remove('vt-run');root.removeAttribute('data-vt-dir');}};
+      p.vt.finished.then(end,end);
+      p.vt.ready.catch(function(){});
+      p.vt.updateCallbackDone.catch(function(){});
+    }catch(e){
+      pending=null;clearTimeout(p.t);unfreeze();root.classList.remove('vt-run');paint(now);
+    }
+  });
+  slides.forEach(function(s){mo.observe(s,{attributes:true,attributeFilter:['class']});});
+})();
+
+}catch(e){}})();
+</script>
+</body>
+</html>

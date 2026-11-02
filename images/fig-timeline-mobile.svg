@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 812" role="img">
+<title>從制裁到 2027 年的時間軸</title>
+<desc>2025 年底的制裁名單、2026 年的工廠與 Meridian、BlueChip 發表與期中選舉，以及 2027 年的計畫與報告截止日。</desc>
+<style>
+svg{font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+.bg{fill:#121A30}.ink{fill:#EAF0FF}.mut{fill:#9AA8C7}.line{stroke:#2C3A63}
+.acc{fill:#3B63E0}.amb{fill:#FFB84D}.ambs{stroke:#FFB84D}
+.sq{fill:#2A3558}.on{fill:#FFFFFF}.red{fill:#FF8A8A}.reds{stroke:#FF8A8A}
+.hatch{stroke:#FFB84D;stroke-width:3}
+@media (prefers-color-scheme:light){
+.bg{fill:#FFFFFF}.ink{fill:#0E1530}.mut{fill:#51608A}.line{stroke:#D7DCEB}
+.acc{fill:#2347D6}.amb{fill:#9A5700}.ambs{stroke:#9A5700}
+.sq{fill:#CBD3EA}.on{fill:#FFFFFF}.red{fill:#B02A2A}.reds{stroke:#B02A2A}
+.hatch{stroke:#9A5700}}
+</style>
+<rect class="bg" width="600" height="812" rx="22"/>
+<line class="line" x1="70" y1="92" x2="70" y2="746" stroke-width="4"/><circle class="acc" cx="70" cy="124" r="12"/><text x="108" y="126" class="ink" font-size="28" font-weight="800" text-anchor="start">2025-12-26</text><text x="108" y="164" class="mut" font-size="27" font-weight="400" text-anchor="start">中國公布制裁名單</text><circle class="acc" cx="70" cy="228" r="12"/><text x="108" y="230" class="ink" font-size="28" font-weight="800" text-anchor="start">2026-07-27</text><text x="108" y="268" class="mut" font-size="27" font-weight="400" text-anchor="start">首架俄亥俄製 Fury 下線</text><circle class="acc" cx="70" cy="332" r="12"/><text x="108" y="334" class="ink" font-size="28" font-weight="800" text-anchor="start">2026-09-30</text><text x="108" y="372" class="mut" font-size="27" font-weight="400" text-anchor="start">國防部宣布 Meridian</text><circle class="acc" cx="70" cy="436" r="12"/><text x="108" y="438" class="ink" font-size="28" font-weight="800" text-anchor="start">2026-10-27</text><text x="108" y="476" class="mut" font-size="27" font-weight="400" text-anchor="start">BlueChip 發表、本場訪談</text><circle class="acc" cx="70" cy="540" r="12"/><text x="108" y="542" class="ink" font-size="28" font-weight="800" text-anchor="start">2026-11-03</text><text x="108" y="580" class="mut" font-size="27" font-weight="400" text-anchor="start">期中選舉</text><circle class="acc" cx="70" cy="644" r="12"/><text x="108" y="646" class="ink" font-size="28" font-weight="800" text-anchor="start">2027-01-28</text><text x="108" y="684" class="mut" font-size="27" font-weight="400" text-anchor="start">Meridian 報告截止（報導）</text><circle class="amb" cx="70" cy="748" r="12"/><text x="108" y="750" class="ink" font-size="28" font-weight="800" text-anchor="start">2027 年</text><text x="108" y="788" class="mut" font-size="27" font-weight="400" text-anchor="start">BlueChip 預購與量產（計畫）</text>
+</svg>

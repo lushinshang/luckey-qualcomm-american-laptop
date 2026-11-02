@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 424" role="img">
+<title>2025-12-26 中國反制名單示意</title>
+<desc>20 家美國國防企業的轉載名單沒有列出 Anduril 公司；10 名高階主管的名單第一位是 Palmer Luckey。</desc>
+<style>
+svg{font-family:"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+.bg{fill:#121A30}.ink{fill:#EAF0FF}.mut{fill:#9AA8C7}.line{stroke:#2C3A63}
+.acc{fill:#3B63E0}.amb{fill:#FFB84D}.ambs{stroke:#FFB84D}
+.sq{fill:#2A3558}.on{fill:#FFFFFF}.red{fill:#FF8A8A}.reds{stroke:#FF8A8A}
+.hatch{stroke:#FFB84D;stroke-width:3}
+@media (prefers-color-scheme:light){
+.bg{fill:#FFFFFF}.ink{fill:#0E1530}.mut{fill:#51608A}.line{stroke:#D7DCEB}
+.acc{fill:#2347D6}.amb{fill:#9A5700}.ambs{stroke:#9A5700}
+.sq{fill:#CBD3EA}.on{fill:#FFFFFF}.red{fill:#B02A2A}.reds{stroke:#B02A2A}
+.hatch{stroke:#9A5700}}
+</style>
+<rect class="bg" width="1200" height="424" rx="22"/>
+<text x="60" y="64" class="ink" font-size="38" font-weight="800" text-anchor="start">2025-12-26 中國反制名單</text><text x="60" y="128" class="mut" font-size="28" font-weight="400" text-anchor="start">20 家美國國防企業</text><rect class="sq" x="60" y="148" width="40" height="40" rx="8"/><rect class="sq" x="108" y="148" width="40" height="40" rx="8"/><rect class="sq" x="156" y="148" width="40" height="40" rx="8"/><rect class="sq" x="204" y="148" width="40" height="40" rx="8"/><rect class="sq" x="252" y="148" width="40" height="40" rx="8"/><rect class="sq" x="300" y="148" width="40" height="40" rx="8"/><rect class="sq" x="348" y="148" width="40" height="40" rx="8"/><rect class="sq" x="396" y="148" width="40" height="40" rx="8"/><rect class="sq" x="444" y="148" width="40" height="40" rx="8"/><rect class="sq" x="492" y="148" width="40" height="40" rx="8"/><rect class="sq" x="60" y="196" width="40" height="40" rx="8"/><rect class="sq" x="108" y="196" width="40" height="40" rx="8"/><rect class="sq" x="156" y="196" width="40" height="40" rx="8"/><rect class="sq" x="204" y="196" width="40" height="40" rx="8"/><rect class="sq" x="252" y="196" width="40" height="40" rx="8"/><rect class="sq" x="300" y="196" width="40" height="40" rx="8"/><rect class="sq" x="348" y="196" width="40" height="40" rx="8"/><rect class="sq" x="396" y="196" width="40" height="40" rx="8"/><rect class="sq" x="444" y="196" width="40" height="40" rx="8"/><rect class="sq" x="492" y="196" width="40" height="40" rx="8"/><text x="680" y="128" class="mut" font-size="28" font-weight="400" text-anchor="start">10 名高階主管</text><rect class="acc" x="680" y="148" width="38" height="38" rx="8"/><rect class="sq" x="726" y="148" width="38" height="38" rx="8"/><rect class="sq" x="772" y="148" width="38" height="38" rx="8"/><rect class="sq" x="818" y="148" width="38" height="38" rx="8"/><rect class="sq" x="864" y="148" width="38" height="38" rx="8"/><rect class="sq" x="910" y="148" width="38" height="38" rx="8"/><rect class="sq" x="956" y="148" width="38" height="38" rx="8"/><rect class="sq" x="1002" y="148" width="38" height="38" rx="8"/><rect class="sq" x="1048" y="148" width="38" height="38" rx="8"/><rect class="sq" x="1094" y="148" width="38" height="38" rx="8"/><rect x="60" y="254" width="40" height="40" rx="8" fill="none" class="reds" stroke-width="3" stroke-dasharray="7 6"/><text x="118" y="284" class="red" font-size="28" font-weight="700" text-anchor="start">Anduril 公司：轉載內容沒有列出</text><text x="680" y="284" class="ink" font-size="34" font-weight="800" text-anchor="start">Palmer Luckey</text><text x="680" y="320" class="mut" font-size="24" font-weight="400" text-anchor="start">Anduril 創辦人，名單第一位</text><line class="line" x1="60" y1="352" x2="1140" y2="352" stroke-width="2"/><text x="60" y="392" class="mut" font-size="24" font-weight="400" text-anchor="start">措施：凍結中國境內財產、禁止交易；高階主管另不予簽發簽證、不准入境</text>
+</svg>
